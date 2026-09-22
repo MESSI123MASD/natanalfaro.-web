@@ -37,9 +37,20 @@
 }
 
 .tarjeta__enlace {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  align-self: flex-start;
   font-family: var(--fuente-titulos);
   font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
   color: var(--color-acento-oscuro);
+}
+
+@media (max-width: 640px) {
+  .ministerios__grid { gap: 16px; }
+  .tarjeta__imagen { aspect-ratio: 16 / 9; }
+  .tarjeta__cuerpo { padding: 16px 18px 18px; }
+  .tarjeta:hover { transform: none; }
 }

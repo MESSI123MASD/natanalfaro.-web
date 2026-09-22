@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { navegacion, sitio } from '../data/site'
 import './Header.css'
@@ -8,6 +8,23 @@ export default function Header() {
   const { pathname } = useLocation()
 
   const cerrar = () => setAbierto(false)
+
+  // Con el menú abierto: bloquear el scroll del fondo, cerrar con Escape
+  // y cerrar si la pantalla pasa a ancho de escritorio (ej. al girar la tablet).
+  useEffect(() => {
+    if (!abierto) return
+    document.body.classList.add('menu-abierto')
+    const onKey = (e) => e.key === 'Escape' && setAbierto(false)
+    const mq = window.matchMedia('(min-width: 861px)')
+    const onMq = (e) => e.matches && setAbierto(false)
+    window.addEventListener('keydown', onKey)
+    mq.addEventListener('change', onMq)
+    return () => {
+      document.body.classList.remove('menu-abierto')
+      window.removeEventListener('keydown', onKey)
+      mq.removeEventListener('change', onMq)
+    }
+  }, [abierto])
 
   return (
     <header className="header">
@@ -50,6 +67,7 @@ export default function Header() {
           </ul>
         </nav>
       </div>
+      {abierto && <div className="header__velo" onClick={cerrar} aria-hidden="true" />}
     </header>
   )
 }

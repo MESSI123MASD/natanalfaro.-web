@@ -26,5 +26,5 @@
 
 @media (max-width: 860px) {
   .biografia { grid-template-columns: 1fr; gap: 32px; }
-  .mision { padding: 24px; }
+  .mision { margin-top: 40px; padding: 20px; font-size: 1.05rem; }
 }

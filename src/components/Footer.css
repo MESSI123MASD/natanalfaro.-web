@@ -18,7 +18,13 @@
 .footer__lema { font-style: italic; }
 
 .footer__contacto { font-style: normal; }
-.footer__contacto p { margin-bottom: 6px; }
+.footer__contacto p { margin-bottom: 0; }
+.footer__contacto a,
+.footer__redes a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
 
 .footer__redes {
   list-style: none;
@@ -26,7 +32,7 @@
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px 16px;
+  gap: 0 16px;
 }
 
 .footer__base {
@@ -34,4 +40,9 @@
   padding: 18px 0;
   font-size: 0.85rem;
   text-align: center;
+}
+
+@media (max-width: 640px) {
+  .footer { padding-top: 40px; }
+  .footer__grid { gap: 24px; }
 }

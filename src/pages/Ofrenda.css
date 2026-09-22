@@ -47,3 +47,12 @@
   background: var(--color-fondo-alt);
   border-radius: var(--radio);
 }
+
+@media (max-width: 640px) {
+  .ofrenda__intro { font-size: 1.05rem; }
+  .ofrenda__versiculo { padding: 16px 20px; }
+  .ofrenda__ayuda { padding: 20px; }
+  .ofrenda__ayuda .boton,
+  .ofrenda__botones .boton { width: 100%; }
+  .cuenta dd { overflow-wrap: anywhere; }
+}

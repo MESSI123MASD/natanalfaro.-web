@@ -31,5 +31,11 @@
 .hero__acciones { display: flex; flex-wrap: wrap; gap: 14px; }
 
 @media (max-width: 640px) {
-  .hero { padding: 80px 0 72px; }
+  .hero { padding: 64px 0 56px; }
+  .hero__texto { font-size: 1.05rem; }
+}
+
+@media (max-width: 440px) {
+  .hero__acciones { flex-direction: column; }
+  .hero__acciones .boton { width: 100%; }
 }

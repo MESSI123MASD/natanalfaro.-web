@@ -26,3 +26,10 @@
 
 .vida__redes { text-align: center; margin-top: 40px; }
 .vida__redes a { color: var(--color-acento); }
+
+.vida__redes a { display: inline-block; padding: 12px 4px; }
+
+@media (max-width: 640px) {
+  .vida__canal { padding: 22px; }
+  .vida__canal .boton { width: 100%; }
+}
