@@ -1,22 +1,31 @@
-/* Variables de diseño: cambia colores y tipografía desde aquí */
+/* ==========================================================
+   Diseño v0.3 — oscuro y minimalista, un solo acento dorado.
+   Cambia colores y tipografía desde estas variables.
+   ========================================================== */
 :root {
-  --color-primario: #0f2340;      /* azul noche */
-  --color-primario-claro: #1d3a63;
-  --color-acento: #e8b923;        /* dorado, en línea con el amarillo del sitio actual */
-  --color-acento-oscuro: #b98e0c;
-  --color-texto: #1f2733;
-  --color-texto-suave: #5b6675;
-  --color-fondo: #ffffff;
-  --color-fondo-alt: #f5f3ee;
-  --color-borde: #e3e0d8;
+  --fondo: #0a0a0a;             /* negro principal */
+  --fondo-elevado: #121212;     /* tarjetas y bloques */
+  --fondo-alt: #0f0f0f;         /* secciones alternas */
+  --borde: #1f1f1f;
+  --borde-fuerte: #2e2e2e;
+
+  --texto: #ededed;
+  --texto-suave: #9a9a9a;
+  --texto-tenue: #6b6b6b;
+
+  --acento: #d9b25f;            /* dorado cálido: único color de marca */
+  --acento-claro: #f0d49a;
+  --acento-glow: rgba(217, 178, 95, 0.18);
 
   --fuente-titulos: 'Montserrat', system-ui, sans-serif;
   --fuente-texto: 'Source Sans 3', system-ui, sans-serif;
 
-  --ancho-max: 1140px;
-  --radio: 12px;
-  --sombra: 0 8px 24px rgba(15, 35, 64, 0.08);
+  --ancho-max: 1120px;
+  --radio: 16px;
   --alto-header: 72px;
+  --curva: cubic-bezier(0.22, 1, 0.36, 1);   /* salida suave para animaciones */
+
+  color-scheme: only dark;
 }
 
 *,
@@ -28,40 +37,57 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(232, 185, 35, 0.25);
+  -webkit-tap-highlight-color: rgba(217, 178, 95, 0.2);
   scroll-behavior: smooth;
   scroll-padding-top: var(--alto-header);
+  background: var(--fondo);
 }
 
 body {
   margin: 0;
   font-family: var(--fuente-texto);
   font-size: 1.0625rem;
-  line-height: 1.65;
-  color: var(--color-texto);
-  background: var(--color-fondo);
+  line-height: 1.7;
+  color: var(--texto);
+  background: var(--fondo);
   -webkit-font-smoothing: antialiased;
   overflow-wrap: break-word;
 }
 
+/* En teléfono la página nunca debe moverse de lado a lado.
+   "clip" no rompe el header fijo (sticky); "hidden" es el respaldo para navegadores viejos. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+@supports (overflow-x: clip) {
+  html,
+  body { overflow-x: clip; }
+}
+
 body.menu-abierto { overflow: hidden; }
+
+::selection { background: var(--acento); color: #000; }
 
 h1,
 h2,
 h3 {
   font-family: var(--fuente-titulos);
-  line-height: 1.2;
-  color: var(--color-primario);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: #fff;
   margin: 0 0 0.6em;
 }
 
-h1 { font-size: clamp(2rem, 5vw, 3.25rem); }
-h2 { font-size: clamp(1.6rem, 3.5vw, 2.25rem); }
-h3 { font-size: 1.2rem; }
+h1 { font-size: clamp(2.4rem, 7vw, 4.5rem); font-weight: 800; }
+h2 { font-size: clamp(1.8rem, 4.5vw, 2.8rem); }
+h3 { font-size: 1.15rem; letter-spacing: -0.01em; }
 
 p { margin: 0 0 1em; }
 
-a { color: var(--color-primario-claro); }
+a { color: var(--acento); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
 img { max-width: 100%; display: block; }
 
@@ -69,75 +95,143 @@ img { max-width: 100%; display: block; }
   width: 100%;
   max-width: var(--ancho-max);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
-.seccion { padding: 80px 0; }
-.seccion--alt { background: var(--color-fondo-alt); }
+.seccion { padding: 120px 0; position: relative; }
+.seccion--alt { background: var(--fondo-alt); }
+
+/* Línea fina entre secciones, se desvanece a los lados */
+.seccion + .seccion::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--borde-fuerte), transparent);
+}
 
 .seccion__encabezado {
-  text-align: center;
   max-width: 680px;
-  margin: 0 auto 48px;
+  margin: 0 0 64px;
 }
+
+.seccion__encabezado--centro { margin-inline: auto; text-align: center; }
+.seccion__encabezado p { color: var(--texto-suave); font-size: 1.1rem; }
 
 .seccion__etiqueta {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--fuente-titulos);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-acento-oscuro);
-  margin-bottom: 8px;
+  color: var(--acento);
+  margin-bottom: 16px;
+}
+.seccion__etiqueta::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: currentColor;
 }
 
+/* ---------- Botones ---------- */
 .boton {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 12px 24px;
+  gap: 8px;
+  min-height: 50px;
+  padding: 14px 28px;
   text-align: center;
   border-radius: 999px;
   font-family: var(--fuente-titulos);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  overflow: hidden;
+  transition: transform 0.4s var(--curva), box-shadow 0.4s var(--curva), background 0.3s, color 0.3s, border-color 0.3s;
 }
 .boton:hover { transform: translateY(-2px); }
 
-.boton--primario { background: var(--color-acento); color: var(--color-primario); }
-.boton--primario:hover { background: var(--color-acento-oscuro); color: #fff; }
+.boton--primario {
+  background: var(--acento);
+  color: #0a0a0a;
+}
+.boton--primario:hover {
+  background: var(--acento-claro);
+  box-shadow: 0 10px 40px var(--acento-glow);
+}
 
-.boton--secundario { border-color: currentColor; color: inherit; background: transparent; }
+/* Brillo que cruza el botón al pasar el mouse */
+.boton--primario::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.45) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 0.8s var(--curva);
+}
+.boton--primario:hover::after { transform: translateX(120%); }
 
-/* Accesibilidad: foco visible y enlace para saltar al contenido */
-:focus-visible { outline: 3px solid var(--color-acento); outline-offset: 2px; }
+.boton--secundario {
+  border-color: var(--borde-fuerte);
+  color: var(--texto);
+  background: rgba(255, 255, 255, 0.02);
+}
+.boton--secundario:hover { border-color: var(--acento); color: var(--acento); }
+
+/* ---------- Aparición al hacer scroll ---------- */
+.revelar {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s var(--curva), transform 0.9s var(--curva);
+  transition-delay: var(--retraso, 0ms);
+}
+.revelar.es-visible { opacity: 1; transform: none; }
+
+/* ---------- Accesibilidad ---------- */
+:focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; }
 
 .saltar-contenido {
   position: absolute;
   left: 8px;
   top: 8px;
   transform: translateY(-200%);
-  background: var(--color-acento);
-  color: var(--color-primario);
+  background: var(--acento);
+  color: #000;
   padding: 8px 16px;
+  border-radius: 8px;
   z-index: 100;
 }
 .saltar-contenido:focus { transform: none; }
 
 @media (max-width: 640px) {
   body { font-size: 1rem; }
-  .contenedor { padding: 0 16px; }
-  .seccion { padding: 56px 0; }
-  .seccion__encabezado { margin-bottom: 32px; }
+  .contenedor { padding: 0 20px; }
+  .seccion { padding: 80px 0; }
+  .seccion__encabezado { margin-bottom: 40px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { transition: none !important; }
+  *,
+  *::before,
+  *::after { transition: none !important; animation: none !important; }
+  .revelar { opacity: 1; transform: none; }
+}
+
+/* Páginas internas: dejan espacio para el header fijo */
+.pagina { padding-top: calc(var(--alto-header) + 80px); }
+
+@media (max-width: 640px) {
+  .pagina { padding-top: calc(var(--alto-header) + 40px); }
 }

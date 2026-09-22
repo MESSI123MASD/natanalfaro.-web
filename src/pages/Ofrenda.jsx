@@ -8,8 +8,8 @@ export default function Ofrenda() {
   const sinMetodos = ofrenda.cuentas.length === 0 && ofrenda.enLinea.length === 0
 
   return (
-    <section className="seccion">
-      <div className="contenedor ofrenda">
+    <section className="seccion pagina">
+      <div className="contenedor ofrenda revelar">
         <span className="seccion__etiqueta">Sembrar en la obra</span>
         <h1>{ofrenda.titulo}</h1>
         <p className="ofrenda__intro">{ofrenda.intro}</p>

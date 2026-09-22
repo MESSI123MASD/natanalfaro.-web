@@ -5,7 +5,7 @@ export default function NoEncontrada() {
   useTituloPagina('Página no encontrada')
 
   return (
-    <section className="seccion">
+    <section className="seccion pagina">
       <div className="contenedor" style={{ textAlign: 'center' }}>
         <h1>Página no encontrada</h1>
         <p>La página que buscas no existe o cambió de lugar.</p>

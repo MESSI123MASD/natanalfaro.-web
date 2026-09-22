@@ -5,7 +5,16 @@ import './Header.css'
 
 export default function Header() {
   const [abierto, setAbierto] = useState(false)
+  const [conScroll, setConScroll] = useState(false)
   const { pathname } = useLocation()
+
+  // El header es transparente arriba y se vuelve "vidrio oscuro" al bajar
+  useEffect(() => {
+    const onScroll = () => setConScroll(window.scrollY > 24)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const cerrar = () => setAbierto(false)
 
@@ -27,7 +36,7 @@ export default function Header() {
   }, [abierto])
 
   return (
-    <header className="header">
+    <header className={`header ${conScroll || abierto ? 'header--solido' : ''}`}>
       <div className="contenedor header__barra">
         <Link to="/" className="header__logo" onClick={cerrar}>
           <img
@@ -36,7 +45,10 @@ export default function Header() {
             className="header__logo-img"
             onError={(e) => (e.currentTarget.style.display = 'none')}
           />
-          <span>{sitio.nombre}</span>
+          <span className="header__marca">
+            <small>Pastor</small>
+            {sitio.nombre.replace('Pastor ', '')}
+          </span>
         </Link>
 
         <button

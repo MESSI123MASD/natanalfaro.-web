@@ -13,14 +13,14 @@ export default function Eventos() {
   return (
     <section id="eventos" className="seccion">
       <div className="contenedor">
-        <div className="seccion__encabezado">
+        <div className="seccion__encabezado revelar">
           <span className="seccion__etiqueta">Agenda</span>
           <h2>Próximos eventos</h2>
         </div>
 
         <ul className="eventos">
           {proximos.map((e) => (
-            <li key={e.titulo + e.fecha} className="evento">
+            <li key={e.titulo + e.fecha} className="evento revelar">
               <time dateTime={e.fecha} className="evento__fecha">
                 {formatoFecha.format(new Date(`${e.fecha}T12:00:00`))}
               </time>

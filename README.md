@@ -55,3 +55,13 @@ public/
 2. En cPanel → Administrador de archivos, abre la carpeta de natanalfaro.org (debe estar **vacía**, sin archivos de WordPress).
 3. Comprime el **contenido** de `dist/` en un ZIP, súbelo y extráelo ahí. Activa "Mostrar archivos ocultos" para confirmar que `.htaccess` quedó.
 4. Prueba `https://natanalfaro.org` y `https://natanalfaro.org/ofrenda` (recargando la página en esa ruta).
+
+## Versiones
+
+Usamos versionado semántico; el historial está en `CHANGELOG.md` y la versión actual se ve en el pie de página.
+
+Para publicar una versión nueva:
+
+1. Anota los cambios en `CHANGELOG.md` (bajo `[Sin publicar]`, luego muévelos a la versión nueva).
+2. Sube el número: `npm version patch` (arreglos), `npm version minor` (secciones nuevas) o `npm version major`.
+   Esto cambia `package.json`, crea el commit y la etiqueta `vX.Y.Z` en Git.

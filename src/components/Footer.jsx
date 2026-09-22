@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="contenedor footer__grid">
         <div>
-          <h3 className="footer__titulo">{sitio.nombre}</h3>
+          <p className="footer__nombre">{sitio.nombre}</p>
           <p className="footer__lema">{sitio.lema}</p>
         </div>
 
@@ -34,7 +34,10 @@ export default function Footer() {
       </div>
 
       <div className="footer__base">
-        <div className="contenedor">© {anio} {sitio.nombre}. Todos los derechos reservados.</div>
+        <div className="contenedor">
+          <span>© {anio} {sitio.nombre}. Todos los derechos reservados.</span>
+          <span className="footer__version">v{__APP_VERSION__}</span>
+        </div>
       </div>
     </footer>
   )

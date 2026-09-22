@@ -1,25 +1,31 @@
-.ofrenda { max-width: 820px; }
+.ofrenda { max-width: 760px; }
 
-.ofrenda__intro { font-size: 1.15rem; }
+.ofrenda h1 { font-size: clamp(2.4rem, 6vw, 3.8rem); }
+
+.ofrenda__intro { font-size: 1.2rem; color: var(--texto-suave); }
 
 .ofrenda__versiculo {
-  margin: 32px 0;
-  padding: 20px 28px;
-  border-left: 5px solid var(--color-acento);
-  background: var(--color-fondo-alt);
-  font-style: italic;
-  color: var(--color-primario);
+  margin: 48px 0;
+  padding: 0 0 0 24px;
+  border-left: 1px solid var(--acento);
+  font-family: var(--fuente-titulos);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #fff;
 }
 
 .ofrenda__versiculo cite {
   display: block;
-  margin-top: 6px;
+  margin-top: 8px;
+  font-family: var(--fuente-texto);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.9rem;
+  color: var(--acento);
 }
 
-.ofrenda__bloque { margin-top: 48px; }
+.ofrenda__bloque { margin-top: 56px; }
+.ofrenda__bloque h2 { font-size: 1.4rem; }
 
 .ofrenda__botones { display: flex; flex-wrap: wrap; gap: 12px; }
 
@@ -32,26 +38,29 @@
 .cuenta {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 6px 16px;
+  gap: 8px 16px;
   margin: 0;
-  padding: 20px;
-  border: 1px solid var(--color-borde);
+  padding: 24px;
+  background: var(--fondo-elevado);
+  border: 1px solid var(--borde);
   border-radius: var(--radio);
 }
 
-.cuenta dt { color: var(--color-texto-suave); }
-.cuenta dd { margin: 0; font-weight: 600; }
+.cuenta dt { color: var(--texto-tenue); }
+.cuenta dd { margin: 0; font-weight: 600; color: #fff; }
 
 .ofrenda__ayuda {
-  padding: 28px;
-  background: var(--color-fondo-alt);
+  padding: 36px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--borde);
   border-radius: var(--radio);
 }
+.ofrenda__ayuda p { color: var(--texto-suave); }
 
 @media (max-width: 640px) {
   .ofrenda__intro { font-size: 1.05rem; }
-  .ofrenda__versiculo { padding: 16px 20px; }
-  .ofrenda__ayuda { padding: 20px; }
+  .ofrenda__versiculo { font-size: 1.15rem; margin: 36px 0; }
+  .ofrenda__ayuda { padding: 24px; }
   .ofrenda__ayuda .boton,
   .ofrenda__botones .boton { width: 100%; }
   .cuenta dd { overflow-wrap: anywhere; }

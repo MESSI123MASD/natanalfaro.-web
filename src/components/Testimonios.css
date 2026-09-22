@@ -1,21 +1,22 @@
 .testimonios {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .testimonio {
   margin: 0;
-  background: #fff;
-  padding: 28px;
+  padding: 32px;
+  background: var(--fondo-elevado);
+  border: 1px solid var(--borde);
   border-radius: var(--radio);
-  box-shadow: var(--sombra);
 }
 
 .testimonio blockquote {
-  margin: 0 0 16px;
-  font-style: italic;
+  margin: 0 0 20px;
+  font-size: 1.05rem;
+  color: var(--texto);
 }
 
-.testimonio figcaption { color: var(--color-texto-suave); font-size: 0.95rem; }
-.testimonio strong { color: var(--color-primario); }
+.testimonio figcaption { color: var(--texto-tenue); font-size: 0.9rem; }
+.testimonio strong { color: var(--acento); font-weight: 600; }

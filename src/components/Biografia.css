@@ -1,30 +1,61 @@
 .biografia {
   display: grid;
   grid-template-columns: 5fr 6fr;
-  gap: 56px;
+  gap: 80px;
   align-items: center;
 }
 
-.biografia__imagen {
+/* Marco con borde dorado desplazado detrás de la foto */
+.biografia__marco {
+  position: relative;
+}
+.biografia__marco::before {
+  content: '';
+  position: absolute;
+  inset: 20px -20px -20px 20px;
+  border: 1px solid var(--acento);
   border-radius: var(--radio);
-  box-shadow: var(--sombra);
+  opacity: 0.35;
+  transition: inset 0.6s var(--curva), opacity 0.6s;
+}
+.biografia__marco:hover::before { inset: 10px -10px -10px 10px; opacity: 0.7; }
+
+.biografia__imagen {
+  position: relative;
+  border-radius: var(--radio);
   width: 100%;
   height: auto;
+  filter: grayscale(0.2);
+  transition: filter 0.6s;
 }
+.biografia__marco:hover .biografia__imagen { filter: none; }
+
+.biografia__texto { color: var(--texto-suave); }
 
 .mision {
-  margin: 64px auto 0;
-  max-width: 860px;
-  padding: 32px 40px;
-  border-left: 5px solid var(--color-acento);
-  background: var(--color-fondo-alt);
-  border-radius: 0 var(--radio) var(--radio) 0;
-  font-size: 1.15rem;
-  font-style: italic;
-  color: var(--color-primario);
+  position: relative;
+  margin: 120px auto 0;
+  max-width: 900px;
+  padding: 0;
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #fff;
+}
+
+.mision__comillas {
+  display: block;
+  font-size: 5rem;
+  line-height: 0.6;
+  color: var(--acento);
+  margin-bottom: 16px;
 }
 
 @media (max-width: 860px) {
-  .biografia { grid-template-columns: 1fr; gap: 32px; }
-  .mision { margin-top: 40px; padding: 20px; font-size: 1.05rem; }
+  .biografia { grid-template-columns: 1fr; gap: 56px; }
+  .biografia__marco { margin-right: 20px; }
+  .mision { margin-top: 80px; }
 }
