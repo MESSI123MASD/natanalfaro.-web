@@ -1,0 +1,37 @@
+.footer {
+  background: var(--color-primario);
+  color: rgba(255, 255, 255, 0.85);
+  padding-top: 56px;
+}
+
+.footer a { color: #fff; }
+.footer a:hover { color: var(--color-acento); }
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+.footer__titulo { color: var(--color-acento); font-size: 1rem; }
+.footer__lema { font-style: italic; }
+
+.footer__contacto { font-style: normal; }
+.footer__contacto p { margin-bottom: 6px; }
+
+.footer__redes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+}
+
+.footer__base {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 18px 0;
+  font-size: 0.85rem;
+  text-align: center;
+}

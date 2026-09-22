@@ -1,0 +1,30 @@
+.biografia {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.biografia__imagen {
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  width: 100%;
+  height: auto;
+}
+
+.mision {
+  margin: 64px auto 0;
+  max-width: 860px;
+  padding: 32px 40px;
+  border-left: 5px solid var(--color-acento);
+  background: var(--color-fondo-alt);
+  border-radius: 0 var(--radio) var(--radio) 0;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--color-primario);
+}
+
+@media (max-width: 860px) {
+  .biografia { grid-template-columns: 1fr; gap: 32px; }
+  .mision { padding: 24px; }
+}

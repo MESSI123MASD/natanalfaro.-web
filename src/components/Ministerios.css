@@ -1,0 +1,45 @@
+.ministerios__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: transform 0.2s;
+}
+
+.tarjeta:hover { transform: translateY(-4px); }
+
+.tarjeta__imagen {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  font-size: 2rem;
+}
+
+.tarjeta__cuerpo {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tarjeta__cuerpo p {
+  font-size: 0.97rem;
+  color: var(--color-texto-suave);
+  flex: 1;
+}
+
+.tarjeta__enlace {
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--color-acento-oscuro);
+}

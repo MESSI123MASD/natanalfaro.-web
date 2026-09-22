@@ -1,0 +1,21 @@
+.testimonios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.testimonio {
+  margin: 0;
+  background: #fff;
+  padding: 28px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.testimonio blockquote {
+  margin: 0 0 16px;
+  font-style: italic;
+}
+
+.testimonio figcaption { color: var(--color-texto-suave); font-size: 0.95rem; }
+.testimonio strong { color: var(--color-primario); }

@@ -1,0 +1,17 @@
+Copia aquí las fotos desde el respaldo del sitio viejo (wp-content/uploads),
+SOLO imágenes (.jpg .png .webp). Nunca copies archivos .php o .js del respaldo.
+
+Nombres que espera el sitio (si falta alguno, se muestra un recuadro con iniciales):
+  logo.png                    logo del header
+  hero.jpg                    fondo de la portada (horizontal, ~1920x1080)
+  natan-y-cristina.png        foto de la biografía (en el sitio viejo: 2022/02/Natan-y-Cristina-Alfaro.png)
+  vida-bendecida.jpg          logo de Vida Bendecida
+  og-imagen.jpg               imagen al compartir en WhatsApp/Facebook (1200x630)
+  ministerios/casa-de-mi-gloria.jpg
+  ministerios/faro-del-espiritu.jpg
+  ministerios/centro-el-faro.jpg
+  ministerios/centro-entrenamiento.jpg
+  ministerios/escuela-obreros.jpg
+  ministerios/lighthouse.jpg
+  ministerios/acahualinca.jpg
+  ministerios/congreso-enamorados.jpg
