@@ -1,8 +1,6 @@
 {
-  "modo": "oscuro",
+  "modo": "claro",
   "paleta": "dorado",
-  "color_acento": "",
-  "color_fondo": "",
   "fuente_titulos": "Montserrat",
   "fuente_texto": "Source Sans 3",
   "tamano_texto": "normal",
