@@ -10,6 +10,14 @@ Mientras el sitio esté en construcción usamos `0.x`. Al publicarlo en natanalf
 
 ## [Sin publicar]
 
+## [0.5.0] - 2026-09-24
+### Agregado
+- Sección **Diseño** en el panel: modo oscuro/claro, 6 paletas aprobadas o colores personalizados, 10 tipos de letra, tamaño de letra, estilo de esquinas, animaciones y secciones visibles (`src/content/tema.json`, `src/lib/tema.js`).
+- **Vista previa del borrador**: abrir el sitio con `?vista-previa` muestra el contenido de la rama `borrador` de GitHub al instante, con una barra que indica quién hizo el último cambio. Se mantiene al navegar y se sale con "Salir".
+### Cambiado
+- Los colores fijos del CSS pasaron a variables del tema; el acento se oscurece solo en modo claro si no se lee bien.
+- El encabezado es sólido fuera de la portada.
+
 ## [0.4.0] - 2026-09-24
 ### Agregado
 - Panel de edición visual con Pages CMS (`.pages.yml`): textos, fotos, ministerios, eventos, testimonios, Vida Bendecida, ofrenda y contacto se editan desde https://app.pagescms.org, sin tocar código.

@@ -7,6 +7,118 @@ media:
   output: /img
 
 content:
+  - name: tema
+    label: Diseño (colores, letras, estilo)
+    type: file
+    path: src/content/tema.json
+    format: json
+    fields:
+      - name: modo
+        label: Modo
+        type: select
+        options:
+          values:
+            - name: oscuro
+              label: Oscuro (fondo negro)
+            - name: claro
+              label: Claro (fondo blanco)
+      - name: paleta
+        label: Paleta de colores
+        description: Colores probados para que todo se lea bien. Elige "Personalizada" para usar tus propios colores abajo.
+        type: select
+        options:
+          values:
+            - name: dorado
+              label: Dorado (actual)
+            - name: champana
+              label: Champaña
+            - name: bronce
+              label: Bronce
+            - name: esmeralda
+              label: Esmeralda
+            - name: lavanda
+              label: Lavanda
+            - name: plata
+              label: Plata
+            - name: personalizada
+              label: Personalizada
+      - name: color_acento
+        label: Color de acento (solo con paleta Personalizada)
+        description: 'Código de color, por ejemplo #D9B25F. Se usa en botones, títulos pequeños y detalles.'
+        type: string
+        pattern:
+          regex: '^$|^#?[0-9A-Fa-f]{6}$'
+          message: 'Usa un código de 6 caracteres, por ejemplo #D9B25F'
+      - name: color_fondo
+        label: Color de fondo (solo con paleta Personalizada, opcional)
+        description: 'Por ejemplo #0A0A0A. Déjalo vacío para usar el del modo elegido.'
+        type: string
+        pattern:
+          regex: '^$|^#?[0-9A-Fa-f]{6}$'
+          message: 'Usa un código de 6 caracteres, por ejemplo #0A0A0A'
+      - name: fuente_titulos
+        label: Tipo de letra de títulos
+        type: select
+        options:
+          values: [Montserrat, Poppins, Raleway, DM Sans, Inter, Playfair Display, Cormorant Garamond, Lora, Merriweather]
+      - name: fuente_texto
+        label: Tipo de letra de párrafos
+        type: select
+        options:
+          values: [Source Sans 3, Inter, DM Sans, Poppins, Raleway, Montserrat, Lora, Merriweather]
+      - name: tamano_texto
+        label: Tamaño de letra
+        type: select
+        options:
+          values:
+            - name: pequeno
+              label: Pequeño
+            - name: normal
+              label: Normal
+            - name: grande
+              label: Grande
+            - name: muy-grande
+              label: Muy grande
+      - name: esquinas
+        label: Esquinas de botones y tarjetas
+        type: select
+        options:
+          values:
+            - name: redondeadas
+              label: Redondeadas
+            - name: suaves
+              label: Suaves
+            - name: rectas
+              label: Rectas
+      - name: animaciones
+        label: Animaciones al hacer scroll
+        type: boolean
+        default: true
+      - name: secciones
+        label: Secciones visibles en el inicio
+        type: object
+        fields:
+          - name: biografia
+            label: Biografía
+            type: boolean
+            default: true
+          - name: ministerios
+            label: Ministerios
+            type: boolean
+            default: true
+          - name: vida_bendecida
+            label: Vida Bendecida
+            type: boolean
+            default: true
+          - name: eventos
+            label: Eventos
+            type: boolean
+            default: true
+          - name: testimonios
+            label: Testimonios
+            type: boolean
+            default: true
+
   - name: inicio
     label: Portada y biografía
     type: file

@@ -11,7 +11,7 @@
   font-family: var(--fuente-titulos);
   font-size: 1.35rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--titulo);
 }
 
 .ofrenda__versiculo cite {
@@ -47,11 +47,11 @@
 }
 
 .cuenta dt { color: var(--texto-tenue); }
-.cuenta dd { margin: 0; font-weight: 600; color: #fff; }
+.cuenta dd { margin: 0; font-weight: 600; color: var(--titulo); }
 
 .ofrenda__ayuda {
   padding: 36px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
+  background: linear-gradient(180deg, var(--capa-1), var(--capa-2));
   border: 1px solid var(--borde);
   border-radius: var(--radio);
 }

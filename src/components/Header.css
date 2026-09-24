@@ -4,14 +4,22 @@
   left: 0;
   right: 0;
   z-index: 50;
-  color: #fff;
+  /* Transparente sobre la portada: textos claros */
+  --titulo: #ffffff;
+  --texto: #ededed;
+  --texto-suave: rgba(255, 255, 255, 0.72);
+  color: var(--titulo);
   border-bottom: 1px solid transparent;
   transition: background 0.4s, border-color 0.4s, backdrop-filter 0.4s;
 }
 
 /* Al bajar: vidrio oscuro con desenfoque */
 .header--solido {
-  background: rgba(10, 10, 10, 0.72);
+  /* Sólido: toma los colores del tema */
+  --titulo: var(--tema-titulo);
+  --texto: var(--tema-texto);
+  --texto-suave: var(--tema-texto-suave);
+  background: var(--vidrio);
   -webkit-backdrop-filter: saturate(160%) blur(16px);
   backdrop-filter: saturate(160%) blur(16px);
   border-bottom-color: var(--borde);
@@ -28,7 +36,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #fff;
+  color: var(--titulo);
   text-decoration: none;
   min-height: 48px;
   min-width: 0;
@@ -86,7 +94,7 @@
 }
 
 .header__nav a:hover,
-.header__nav a[aria-current='page'] { color: #fff; }
+.header__nav a[aria-current='page'] { color: var(--titulo); }
 
 .header__nav a:hover::after,
 .header__nav a[aria-current='page']::after { left: 0; right: 0; }
@@ -108,7 +116,7 @@
 .header__toggle span {
   width: 22px;
   height: 1.5px;
-  background: #fff;
+  background: currentColor;
   transition: transform 0.4s var(--curva), opacity 0.3s;
 }
 
@@ -124,7 +132,7 @@
     top: var(--alto-header);
     left: 0;
     right: 0;
-    background: rgba(10, 10, 10, 0.97);
+    background: var(--fondo);
     border-bottom: 1px solid var(--borde);
     max-height: 0;
     overflow: hidden;

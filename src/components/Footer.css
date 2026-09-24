@@ -44,7 +44,7 @@
   font-family: var(--fuente-titulos);
   font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--titulo);
   letter-spacing: -0.02em;
   margin-bottom: 8px;
 }

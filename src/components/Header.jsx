@@ -36,7 +36,7 @@ export default function Header() {
   }, [abierto])
 
   return (
-    <header className={`header ${conScroll || abierto ? 'header--solido' : ''}`}>
+    <header className={`header ${conScroll || abierto || pathname !== '/' ? 'header--solido' : ''}`}>
       <div className="contenedor header__barra">
         <Link to="/" className="header__logo" onClick={cerrar}>
           <img

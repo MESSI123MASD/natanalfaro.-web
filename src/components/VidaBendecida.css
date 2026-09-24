@@ -26,7 +26,7 @@
   align-items: flex-start;
   padding: 32px;
   border-radius: var(--radio);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
+  background: linear-gradient(180deg, var(--capa-1), var(--capa-2));
   border: 1px solid var(--borde);
   transition:
     opacity 0.9s var(--curva),

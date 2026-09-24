@@ -1,4 +1,11 @@
 .hero {
+  /* La portada siempre es oscura (sobre la foto), aunque el sitio esté en modo claro */
+  --titulo: #ffffff;
+  --texto: #ededed;
+  --texto-suave: rgba(255, 255, 255, 0.72);
+  --borde-fuerte: rgba(255, 255, 255, 0.22);
+  --capa-1: rgba(255, 255, 255, 0.04);
+  color: var(--texto);
   position: relative;
   min-height: 100vh;
   min-height: 100svh;
@@ -116,7 +123,7 @@
   width: 26px;
   height: 42px;
   border: 1px solid var(--borde-fuerte);
-  border-radius: 999px;
+  border-radius: var(--radio-boton);
   display: flex;
   justify-content: center;
   padding-top: 8px;

@@ -3,19 +3,29 @@
    Cambia colores y tipografía desde estas variables.
    ========================================================== */
 :root {
-  --fondo: #0a0a0a;             /* negro principal */
-  --fondo-elevado: #121212;     /* tarjetas y bloques */
-  --fondo-alt: #0f0f0f;         /* secciones alternas */
+  /* Valores por defecto. El panel (Diseño) los reemplaza al cargar: ver src/lib/tema.js */
+  --fondo: #0a0a0a;
+  --fondo-elevado: #121212;
+  --fondo-alt: #0f0f0f;
   --borde: #1f1f1f;
   --borde-fuerte: #2e2e2e;
+  --capa-1: rgba(255, 255, 255, 0.035);
+  --capa-2: rgba(255, 255, 255, 0.01);
+  --vidrio: rgba(10, 10, 10, 0.72);
 
+  --titulo: #ffffff;
   --texto: #ededed;
   --texto-suave: #9a9a9a;
   --texto-tenue: #6b6b6b;
+  --tema-titulo: #ffffff;
+  --tema-texto: #ededed;
+  --tema-texto-suave: #9a9a9a;
 
-  --acento: #d9b25f;            /* dorado cálido: único color de marca */
+  --acento: #d9b25f;
   --acento-claro: #f0d49a;
   --acento-glow: rgba(217, 178, 95, 0.18);
+  --acento-texto: #0a0a0a;
+  --radio-boton: 999px;
 
   --fuente-titulos: 'Montserrat', system-ui, sans-serif;
   --fuente-texto: 'Source Sans 3', system-ui, sans-serif;
@@ -68,7 +78,7 @@ body {
 
 body.menu-abierto { overflow: hidden; }
 
-::selection { background: var(--acento); color: #000; }
+::selection { background: var(--acento); color: var(--acento-texto); }
 
 h1,
 h2,
@@ -77,7 +87,7 @@ h3 {
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: var(--titulo);
   margin: 0 0 0.6em;
 }
 
@@ -149,7 +159,7 @@ img { max-width: 100%; display: block; }
   min-height: 50px;
   padding: 14px 28px;
   text-align: center;
-  border-radius: 999px;
+  border-radius: var(--radio-boton);
   font-family: var(--fuente-titulos);
   font-weight: 600;
   font-size: 0.92rem;
@@ -164,7 +174,7 @@ img { max-width: 100%; display: block; }
 
 .boton--primario {
   background: var(--acento);
-  color: #0a0a0a;
+  color: var(--acento-texto);
 }
 .boton--primario:hover {
   background: var(--acento-claro);
@@ -185,7 +195,7 @@ img { max-width: 100%; display: block; }
 .boton--secundario {
   border-color: var(--borde-fuerte);
   color: var(--texto);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--capa-1);
 }
 .boton--secundario:hover { border-color: var(--acento); color: var(--acento); }
 
@@ -207,7 +217,7 @@ img { max-width: 100%; display: block; }
   top: 8px;
   transform: translateY(-200%);
   background: var(--acento);
-  color: #000;
+  color: var(--acento-texto);
   padding: 8px 16px;
   border-radius: 8px;
   z-index: 100;
@@ -220,6 +230,13 @@ img { max-width: 100%; display: block; }
   .seccion { padding: 80px 0; }
   .seccion__encabezado { margin-bottom: 40px; }
 }
+
+/* Animaciones apagadas desde el panel (Diseño) */
+.sin-animaciones *,
+.sin-animaciones *::before,
+.sin-animaciones *::after { transition: none !important; animation: none !important; }
+.sin-animaciones .revelar,
+.sin-animaciones .hero__entrada { opacity: 1; transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

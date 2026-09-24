@@ -68,6 +68,16 @@ El contenido vive en `src/content/*.json` y se edita desde **Pages CMS**:
 Qué se edita en el panel: textos, fotos, listas (ministerios, eventos, testimonios, cuentas, redes).
 Qué se hace en código: diseño, colores, menú y secciones nuevas. La configuración del panel está en `.pages.yml`.
 
+## Vista previa (antes de publicar)
+
+1. En el panel, elegir la rama **borrador** (arriba) y hacer los cambios ahí.
+2. Abrir el sitio con `?vista-previa` al final, por ejemplo `https://natanalfaro.org/?vista-previa`.
+   Se ve el borrador tal como quedará, con una barra abajo. "Actualizar" trae el último cambio; "Salir" vuelve al sitio normal.
+3. Si está aprobado, en GitHub: **Pull requests → New → base: main ← compare: borrador → Merge**. Eso lo publica.
+
+Requisitos: el repositorio debe ser público (la vista previa lee de GitHub sin contraseña) y la rama `borrador` debe existir.
+Después de cambios de código en `main`, actualizar el borrador: Pull request `borrador ← main`.
+
 ## Publicación automática
 
 `.github/workflows/publicar.yml` compila el sitio en cada cambio de `main` (también los del panel) y, si está activado, lo sube por FTP.

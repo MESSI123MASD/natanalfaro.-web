@@ -1,6 +1,8 @@
 // Datos generales del sitio. Los textos se editan en src/content/sitio.json
 // (o desde el panel de edición). Aquí solo se preparan para los componentes.
-import datos from '../content/sitio.json'
+import { leer } from '../lib/contenido'
+
+const datos = leer('sitio')
 
 export const sitio = {
   nombre: datos.nombre,

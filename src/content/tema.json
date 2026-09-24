@@ -1,0 +1,18 @@
+{
+  "modo": "oscuro",
+  "paleta": "dorado",
+  "color_acento": "",
+  "color_fondo": "",
+  "fuente_titulos": "Montserrat",
+  "fuente_texto": "Source Sans 3",
+  "tamano_texto": "normal",
+  "esquinas": "redondeadas",
+  "animaciones": true,
+  "secciones": {
+    "biografia": true,
+    "ministerios": true,
+    "vida_bendecida": true,
+    "eventos": true,
+    "testimonios": true
+  }
+}

@@ -3,6 +3,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
 import useRevelar from '../hooks/useRevelar'
+import BarraVistaPrevia from './BarraVistaPrevia'
 
 // Al cambiar de ruta: si hay #ancla, baja a esa sección; si no, sube al inicio.
 function DesplazamientoAutomatico() {
@@ -35,6 +36,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <BarraVistaPrevia />
     </>
   )
 }
