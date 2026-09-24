@@ -1,29 +1,26 @@
-// Datos generales del sitio. Editar aquí cambia header, footer y contacto.
+// Datos generales del sitio. Los textos se editan en src/content/sitio.json
+// (o desde el panel de edición). Aquí solo se preparan para los componentes.
+import datos from '../content/sitio.json'
 
 export const sitio = {
-  nombre: 'Pastor Natán Alfaro',
-  lema: 'Hoy es el primer día del resto de tu vida bendecida',
+  nombre: datos.nombre,
+  lema: datos.lema,
   url: 'https://natanalfaro.org',
 }
 
+const soloDigitos = (t) => String(t || '').replace(/\D/g, '')
+
 export const contacto = {
-  direccion: 'Rotonda Universitaria 200 mts. abajo, Managua, Nicaragua',
-  telefono: '+505 8881 8881',
-  telefonoLink: 'tel:+50588818881',
-  whatsapp: 'https://wa.me/50588818881',
-  email: 'pastor@casademigloria.org',
+  direccion: datos.contacto.direccion,
+  telefono: datos.contacto.telefono,
+  telefonoLink: `tel:+${soloDigitos(datos.contacto.telefono)}`,
+  whatsapp: `https://wa.me/${soloDigitos(datos.contacto.whatsapp)}`,
+  email: datos.contacto.email,
 }
 
-export const redes = [
-  { nombre: 'Facebook', url: 'https://www.facebook.com/PastorNatanAlfaro' },
-  { nombre: 'Instagram', url: 'https://www.instagram.com/natanalfaro/' },
-  { nombre: 'YouTube', url: 'https://www.youtube.com/channel/UCtJO0gSt8SCOkijxKb264Cg' },
-  { nombre: 'X (Twitter)', url: 'https://twitter.com/NatanAlfaro' },
-  { nombre: 'Spotify', url: 'https://open.spotify.com/show/6vP6JmsFBu0Xil3Nv8FmMA' },
-  { nombre: 'SoundCloud', url: 'https://soundcloud.com/pastor-nat-n-alfaro' },
-]
+export const redes = datos.redes || []
 
-// Enlaces del menú. Los que empiezan con "/#" llevan a una sección del inicio.
+// Enlaces del menú (los maneja desarrollo). Los que empiezan con "/#" llevan a una sección del inicio.
 export const navegacion = [
   { texto: 'Inicio', ruta: '/' },
   { texto: 'Biografía', ruta: '/#biografia' },

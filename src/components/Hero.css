@@ -16,7 +16,7 @@
   z-index: -1;
   background:
     linear-gradient(180deg, rgba(10, 10, 10, 0.55) 0%, rgba(10, 10, 10, 0.85) 70%, var(--fondo) 100%),
-    url('/img/hero.jpg') center / cover no-repeat;
+    var(--hero-imagen, none) center / cover no-repeat;
   filter: grayscale(0.35);
 }
 

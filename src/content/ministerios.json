@@ -1,0 +1,50 @@
+[
+  {
+    "nombre": "Casa de Mi Gloria",
+    "descripcion": "Somos una iglesia Cristocéntrica: nos enfocamos en una relación con Dios, no en una religión. Nuestra misión es ser instrumento de Jesús para impactar cada vida y alcanzar cada alma de esta nación.",
+    "imagen": "/img/ministerios/casa-de-mi-gloria.jpg",
+    "enlace": "https://casademigloria.org"
+  },
+  {
+    "nombre": "Faro del Espíritu",
+    "descripcion": "Programa radial cuya base fundamental es la Biblia, con diversidad de temas para alimentar tu vida espiritual.",
+    "imagen": "/img/ministerios/faro-del-espiritu.jpg",
+    "enlace": "https://farodelespiritu.com/"
+  },
+  {
+    "nombre": "Centro de Capacitación El Faro",
+    "descripcion": "Espacio para eventos cristianos con auditorio para 250 personas, salones con aire acondicionado y apartamentos con servicio de lavandería, en una zona céntrica de Managua.",
+    "imagen": "/img/ministerios/centro-el-faro.jpg",
+    "enlace": ""
+  },
+  {
+    "nombre": "Centro de Entrenamiento Ministerial Managua",
+    "descripcion": "Centro integrado con Global University que brinda capacitación teológica para fortalecer tu servicio en la obra del Señor.",
+    "imagen": "/img/ministerios/centro-entrenamiento.jpg",
+    "enlace": ""
+  },
+  {
+    "nombre": "Escuela de Formación de Obreros",
+    "descripcion": "Internado para jóvenes con llamado al servicio de Dios, formados para cumplir la visión de Casa de Mi Gloria de ganar personas para Cristo.",
+    "imagen": "/img/ministerios/escuela-obreros.jpg",
+    "enlace": ""
+  },
+  {
+    "nombre": "Lighthouse Christian Academy",
+    "descripcion": "Academia nacida de la necesidad de formar hombres y mujeres con valores cristianos, con aprendizaje activo, enfoque constructivista y atención individualizada.",
+    "imagen": "/img/ministerios/lighthouse.jpg",
+    "enlace": "https://www.facebook.com/LighthouseChristianAcademy/"
+  },
+  {
+    "nombre": "Centro Infantil Acahualinca",
+    "descripcion": "Brinda educación y alimentación física y espiritual a los niños de Acahualinca, una de las comunidades más pobres de Nicaragua. Cada semana se benefician 200 niños, y tú puedes ser parte.",
+    "imagen": "/img/ministerios/acahualinca.jpg",
+    "enlace": "https://www.facebook.com/ElCentroInfantil/"
+  },
+  {
+    "nombre": "Congreso Enamorados",
+    "descripcion": "Congreso anual para desarrollar matrimonios indestructibles y fortalecer la relación de los cónyuges bajo el modelo bíblico, con Dios en el centro.",
+    "imagen": "/img/ministerios/congreso-enamorados.jpg",
+    "enlace": ""
+  }
+]

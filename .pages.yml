@@ -1,0 +1,252 @@
+# Panel de edición del sitio (Pages CMS): https://app.pagescms.org
+# Cada cambio guardado en el panel se registra en GitHub como un commit.
+# Solo edita contenido (textos, fotos, listas). El diseño se cambia en el código.
+
+media:
+  input: public/img
+  output: /img
+
+content:
+  - name: inicio
+    label: Portada y biografía
+    type: file
+    path: src/content/inicio.json
+    format: json
+    fields:
+      - name: portada
+        label: Portada (lo primero que se ve)
+        type: object
+        fields:
+          - name: etiqueta
+            label: Texto pequeño sobre el título
+            type: string
+          - name: titulo
+            label: Título (parte blanca)
+            type: string
+            required: true
+          - name: titulo_resaltado
+            label: Título (parte dorada, al final)
+            type: string
+          - name: texto
+            label: Texto debajo del título
+            type: text
+          - name: imagen_fondo
+            label: Imagen de fondo
+            description: Horizontal, idealmente 1920 × 1080 px.
+            type: image
+      - name: biografia
+        label: Biografía
+        type: object
+        fields:
+          - name: titulo
+            label: Título
+            type: string
+          - name: imagen
+            label: Foto
+            type: image
+          - name: parrafos
+            label: Párrafos
+            type: text
+            list: true
+      - name: mision
+        label: Frase de misión (cita grande)
+        type: text
+
+  - name: ministerios
+    label: Ministerios
+    type: file
+    path: src/content/ministerios.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre
+        type: string
+        required: true
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: imagen
+        label: Imagen
+        description: Horizontal (16:10). Si se deja vacía se muestran las iniciales.
+        type: image
+      - name: enlace
+        label: Enlace "Conocer más" (opcional)
+        type: string
+
+  - name: eventos
+    label: Eventos
+    type: file
+    path: src/content/eventos.json
+    format: json
+    list: true
+    fields:
+      - name: titulo
+        label: Título
+        type: string
+        required: true
+      - name: fecha
+        label: Fecha
+        description: Los eventos pasados se ocultan solos.
+        type: date
+        required: true
+      - name: lugar
+        label: Lugar
+        type: string
+      - name: descripcion
+        label: Descripción
+        type: text
+      - name: enlace
+        label: Enlace (opcional)
+        type: string
+
+  - name: testimonios
+    label: Testimonios
+    type: file
+    path: src/content/testimonios.json
+    format: json
+    list: true
+    fields:
+      - name: nombre
+        label: Nombre
+        type: string
+        required: true
+      - name: lugar
+        label: Ciudad o iglesia
+        type: string
+      - name: texto
+        label: Testimonio
+        type: text
+        required: true
+
+  - name: vida-bendecida
+    label: Vida Bendecida
+    type: file
+    path: src/content/vida-bendecida.json
+    format: json
+    fields:
+      - name: imagen
+        label: Imagen
+        type: image
+      - name: intro
+        label: Texto de introducción
+        type: text
+      - name: canales
+        label: Canales (WhatsApp, Telegram, YouTube)
+        type: object
+        list: true
+        fields:
+          - name: nombre
+            label: Nombre
+            type: string
+          - name: texto
+            label: Descripción
+            type: text
+          - name: url
+            label: Enlace
+            type: string
+          - name: boton
+            label: Texto del botón
+            type: string
+      - name: redes
+        label: Otras redes de Vida Bendecida
+        type: object
+        list: true
+        fields:
+          - name: nombre
+            label: Nombre
+            type: string
+          - name: url
+            label: Enlace
+            type: string
+
+  - name: ofrenda
+    label: Ofrenda y Diezmo
+    type: file
+    path: src/content/ofrenda.json
+    format: json
+    fields:
+      - name: titulo
+        label: Título
+        type: string
+      - name: intro
+        label: Introducción
+        type: text
+      - name: versiculo
+        label: Versículo
+        type: object
+        fields:
+          - name: texto
+            label: Texto
+            type: string
+          - name: cita
+            label: Cita (libro capítulo:versículo)
+            type: string
+      - name: cuentas
+        label: Cuentas bancarias
+        type: object
+        list: true
+        fields:
+          - name: banco
+            label: Banco
+            type: string
+          - name: titular
+            label: Titular (nombre legal del ministerio)
+            type: string
+          - name: cuenta
+            label: Número de cuenta
+            type: string
+          - name: moneda
+            label: Moneda
+            type: string
+      - name: enLinea
+        label: Ofrendar en línea (PayPal u otros)
+        type: object
+        list: true
+        fields:
+          - name: nombre
+            label: Nombre del servicio
+            type: string
+          - name: url
+            label: Enlace
+            type: string
+
+  - name: sitio
+    label: Contacto y redes
+    type: file
+    path: src/content/sitio.json
+    format: json
+    fields:
+      - name: nombre
+        label: Nombre del sitio
+        type: string
+      - name: lema
+        label: Lema (pie de página)
+        type: string
+      - name: contacto
+        label: Contacto
+        type: object
+        fields:
+          - name: direccion
+            label: Dirección
+            type: string
+          - name: telefono
+            label: Teléfono (como se muestra)
+            type: string
+          - name: whatsapp
+            label: WhatsApp (solo números, con código de país)
+            type: string
+          - name: email
+            label: Correo
+            type: string
+      - name: redes
+        label: Redes sociales
+        type: object
+        list: true
+        fields:
+          - name: nombre
+            label: Nombre
+            type: string
+          - name: url
+            label: Enlace
+            type: string

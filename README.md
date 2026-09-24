@@ -20,7 +20,8 @@ npm run preview    # prueba local de dist/
 
 ```text
 src/
-  data/                 <- TEXTOS Y DATOS: edita aquí, no en los componentes
+  content/*.json        <- TEXTOS Y DATOS (los edita el panel)
+  data/                 <- prepara esos datos para los componentes
     site.js             nombre, contacto, redes, menú
     contenido.js        biografía, misión, ministerios, Vida Bendecida, eventos, testimonios
     ofrenda.js          métodos de ofrenda (pendiente de confirmar)
@@ -55,6 +56,25 @@ public/
 2. En cPanel → Administrador de archivos, abre la carpeta de natanalfaro.org (debe estar **vacía**, sin archivos de WordPress).
 3. Comprime el **contenido** de `dist/` en un ZIP, súbelo y extráelo ahí. Activa "Mostrar archivos ocultos" para confirmar que `.htaccess` quedó.
 4. Prueba `https://natanalfaro.org` y `https://natanalfaro.org/ofrenda` (recargando la página en esa ruta).
+
+## Panel de edición (sin programar)
+
+El contenido vive en `src/content/*.json` y se edita desde **Pages CMS**:
+
+1. Entrar a https://app.pagescms.org con una cuenta de GitHub que tenga acceso al repositorio.
+2. Elegir el repositorio y la sección (Portada, Ministerios, Eventos, Ofrenda...).
+3. Editar, subir fotos y **Guardar**. Cada guardado queda como un commit en GitHub.
+
+Qué se edita en el panel: textos, fotos, listas (ministerios, eventos, testimonios, cuentas, redes).
+Qué se hace en código: diseño, colores, menú y secciones nuevas. La configuración del panel está en `.pages.yml`.
+
+## Publicación automática
+
+`.github/workflows/publicar.yml` compila el sitio en cada cambio de `main` (también los del panel) y, si está activado, lo sube por FTP.
+Para activarlo en GitHub → Settings → Secrets and variables → Actions:
+
+- Secrets: `FTP_SERVIDOR`, `FTP_USUARIO`, `FTP_CONTRASENA` (cuenta FTP del hosting).
+- Variables: `PUBLICAR` = `true` y, si hace falta, `FTP_CARPETA` (por defecto `public_html/`).
 
 ## Versiones
 

@@ -1,0 +1,19 @@
+{
+  "portada": {
+    "etiqueta": "Casa de Mi Gloria · Managua",
+    "titulo": "Hoy es el primer día del resto de tu",
+    "titulo_resaltado": "vida bendecida",
+    "texto": "Fundador y pastor principal de Casa de Mi Gloria. Equipando líderes y llevando el mensaje de Jesucristo a cada rincón de Nicaragua.",
+    "imagen_fondo": "/img/hero.jpg"
+  },
+  "biografia": {
+    "titulo": "Soy Natán Alfaro",
+    "imagen": "/img/natan-y-cristina.png",
+    "parrafos": [
+      "Pastor y fundador, junto a mi esposa Cristina, de la iglesia Casa de Mi Gloria en Managua, Nicaragua. Me gradué en Teología de Southwestern Assemblies of God University (SAGU), en Texas, en 1994.",
+      "Dirijo el programa radial Faro del Espíritu y el Centro de Capacitación El Faro. Con Cristina fundamos el ministerio matrimonial Defensores del Pacto y el Congreso Enamorados, y dirigimos el Centro Infantil Acahualinca, Lighthouse Christian Academy, la Escuela de Formación de Obreros y el Centro de Entrenamiento Ministerial Managua.",
+      "Somos padres de Alexa Nicole, Emily Briana, Isabela Sophia y Lucas Nathanael."
+    ]
+  },
+  "mision": "Apasionados por cumplir el sueño de Dios para Nicaragua, hemos creado iglesias, desarrollado proyectos, ministerios y programas con el objetivo de que cada persona pueda conocer a Jesucristo, encontrar salvación en Él, que su vida sea transformada y alcance el propósito por el cual ha sido diseñada."
+}

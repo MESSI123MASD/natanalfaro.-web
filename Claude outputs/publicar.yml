@@ -1,0 +1,46 @@
+# Compila el sitio en cada cambio (incluidos los hechos desde el panel de edición)
+# y, si la publicación está activada, lo sube al hosting por FTP.
+#
+# Para activarlo (una sola vez, en GitHub → Settings del repositorio):
+#   1. Secrets and variables → Actions → Secrets: FTP_SERVIDOR, FTP_USUARIO, FTP_CONTRASENA
+#      (los da Jorge desde el panel de Hostinger → Cuentas FTP).
+#   2. Secrets and variables → Actions → Variables: PUBLICAR = true
+#   3. Opcional: variable FTP_CARPETA (por defecto public_html/).
+
+name: Compilar y publicar
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: publicar
+  cancel-in-progress: true
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Compilar
+        run: npm run build
+
+      - name: Publicar en el hosting por FTP
+        if: ${{ vars.PUBLICAR == 'true' }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVIDOR }}
+          username: ${{ secrets.FTP_USUARIO }}
+          password: ${{ secrets.FTP_CONTRASENA }}
+          local-dir: ./dist/
+          server-dir: ${{ vars.FTP_CARPETA || 'public_html/' }}

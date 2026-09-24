@@ -10,6 +10,13 @@ Mientras el sitio esté en construcción usamos `0.x`. Al publicarlo en natanalf
 
 ## [Sin publicar]
 
+## [0.4.0] - 2026-09-24
+### Agregado
+- Panel de edición visual con Pages CMS (`.pages.yml`): textos, fotos, ministerios, eventos, testimonios, Vida Bendecida, ofrenda y contacto se editan desde https://app.pagescms.org, sin tocar código.
+- Publicación automática opcional en el hosting (Hostinger u otro) por FTP con GitHub Actions (`.github/workflows/publicar.yml`), activable con la variable `PUBLICAR`.
+### Cambiado
+- El contenido se movió a `src/content/*.json`. Los textos de la portada y su imagen de fondo ahora también son editables.
+
 ## [0.3.1] - 2026-09-22
 ### Corregido
 - En teléfonos con "modo oscuro forzado" (Chrome Android, Samsung Internet) el dorado se veía café/rojizo. Se declara `color-scheme: only dark` para que el navegador no altere los colores.

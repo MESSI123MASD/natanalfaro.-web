@@ -1,0 +1,38 @@
+{
+  "imagen": "/img/vida-bendecida.jpg",
+  "intro": "Recibe a diario en tu celular reflexiones y consejos a la luz de la Palabra de Dios, de parte del Pastor Natán Alfaro.",
+  "canales": [
+    {
+      "nombre": "WhatsApp",
+      "texto": "Envía \"Vida Bendecida\" al +505 8881 8881. Tu número se usará solo para mensajes del pastor.",
+      "url": "https://wa.me/50588818881?text=Vida%20Bendecida",
+      "boton": "Suscribirme por WhatsApp"
+    },
+    {
+      "nombre": "Telegram",
+      "texto": "Únete al canal y recibe cada reflexión en cuanto se publica.",
+      "url": "https://t.me/VidaBendecida",
+      "boton": "Unirme en Telegram"
+    },
+    {
+      "nombre": "YouTube",
+      "texto": "Mensajes, series y planes de lectura de cada año.",
+      "url": "https://www.youtube.com/channel/UCtJO0gSt8SCOkijxKb264Cg?sub_confirmation=1",
+      "boton": "Suscribirme en YouTube"
+    }
+  ],
+  "redes": [
+    {
+      "nombre": "Facebook",
+      "url": "https://www.facebook.com/UnaVidaBendecida"
+    },
+    {
+      "nombre": "Instagram",
+      "url": "https://www.instagram.com/vida.bendecida/"
+    },
+    {
+      "nombre": "X (Twitter)",
+      "url": "https://twitter.com/vida_bendecida"
+    }
+  ]
+}
