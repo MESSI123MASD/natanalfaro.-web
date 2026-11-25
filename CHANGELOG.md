@@ -10,6 +10,11 @@ Mientras el sitio esté en construcción usamos `0.x`. Al publicarlo en natanalf
 
 ## [Sin publicar]
 
+## [1.0.1] - 2026-11-25
+
+### Cambiado
+- Títulos con Playfair Display (textos siguen en Avenir y detalles en ITC Eras).
+
 ## [1.0.0] - 2026-11-25
 
 ### Cambiado
