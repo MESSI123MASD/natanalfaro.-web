@@ -10,6 +10,11 @@ Mientras el sitio esté en construcción usamos `0.x`. Al publicarlo en natanalf
 
 ## [Sin publicar]
 
+## [1.0.2] - 2026-11-25
+
+### Cambiado
+- Modo claro (sol): fondo beige pared con una textura muy suave de repello y luz cálida arriba.
+
 ## [1.0.1] - 2026-11-25
 
 ### Cambiado

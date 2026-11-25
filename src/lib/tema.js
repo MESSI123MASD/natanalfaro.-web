@@ -8,12 +8,12 @@ export const PALETAS = {
   clasica: {
     acento: '#d1ad66',
     fondoOscuro: '#0d0c0a',
-    fondoClaro: '#f3ecdf',
+    fondoClaro: '#ece3d2', // beige pared
     tituloOscuro: '#f4ebdc',
     textoOscuro: '#e4dccd',
     tituloClaro: '#15130f',
     textoClaro: '#3a3631',
-    elevadoClaro: '#fbf7f0',
+    elevadoClaro: '#f6f0e5',
   },
   dorado: { acento: '#d9b25f', fondoOscuro: '#0a0a0a', fondoClaro: '#faf8f4' },
   champana: { acento: '#e3c9a0', fondoOscuro: '#0c0b0a', fondoClaro: '#fbf8f3' },
