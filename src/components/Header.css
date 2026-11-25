@@ -189,3 +189,16 @@
   .header__marca { font-size: 0.95rem; }
   .header__logo-img { height: 30px; }
 }
+
+/* Botón sol/luna (y en teléfono, el menú) a la derecha */
+.header__herramientas {
+  order: 3;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 20px;
+}
+.header__nav { order: 2; margin-left: auto; }
+@media (max-width: 860px) {
+  .header__herramientas { margin-left: auto; }
+}

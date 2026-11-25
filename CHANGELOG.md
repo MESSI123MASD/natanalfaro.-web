@@ -10,6 +10,40 @@ Mientras el sitio esté en construcción usamos `0.x`. Al publicarlo en natanalf
 
 ## [Sin publicar]
 
+## [0.8.0] - 2026-11-25
+
+### Agregado
+- Sección "Invitaciones y agenda": tipos de invitación y formulario que envía la solicitud por WhatsApp o correo.
+- Botón "Invitaciones y agenda" en la portada y enlace "Invitaciones" en el menú.
+- Panel: textos, WhatsApp, correo y tipos de invitación editables; opción para ocultar la sección.
+- `netlify.toml` para publicar la copia de prueba en Netlify (sin indexar en Google).
+
+### Quitado
+- Lighthouse Christian Academy y Escuela de Formación de Obreros (ministerios y biografía).
+- Botón "Ofrenda y diezmo" de la portada (sigue en el menú).
+
+## [0.7.0] - 2026-11-16
+
+### Agregado
+- Botón sol/luna en el menú: cada visitante elige ver el sitio oscuro o claro; se recuerda en su navegador.
+- Panel → Diseño: opción para mostrar u ocultar ese botón.
+
+### Arreglado
+- Los teléfonos con "modo oscuro forzado" (Samsung, Chrome, WhatsApp) ya no cambian el dorado a café/rojizo.
+- La frase de la portada usa color sólido para que ningún navegador la altere.
+
+## [0.6.0] - 2026-11-16
+### Agregado
+- Portada nueva con foto, nombre del pastor, frase destacada y accesos directos a sus redes principales.
+- Sección "Sígueme en redes" con todas las redes y sus usuarios.
+- Botón flotante "Redes" que aparece al bajar, para llegar a sus redes desde cualquier parte de la página.
+- Sección "Mensajes" con sus últimos videos de YouTube (se cargan solo al pulsar reproducir).
+- Íconos para redes, editables desde el panel (campo "Ícono" y "Acceso rápido").
+- Foto oficial del pastor en la portada y de Natán y Cristina Alfaro en la biografía.
+### Cambiado
+- Información actualizada desde su página de Facebook (noviembre de 2026): descripción, Pastor Principal desde 2010, redes y contacto.
+- Ministerios como tarjetas de texto mientras no haya fotos reales.
+
 ## [0.5.0] - 2026-09-24
 ### Agregado
 - Sección **Diseño** en el panel: modo oscuro/claro, 6 paletas aprobadas o colores personalizados, 10 tipos de letra, tamaño de letra, estilo de esquinas, animaciones y secciones visibles (`src/content/tema.json`, `src/lib/tema.js`).

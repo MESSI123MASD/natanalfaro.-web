@@ -1,0 +1,128 @@
+.invitaciones { overflow: hidden; }
+
+.invitaciones__brillo {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, var(--acento-glow), transparent 65%);
+  pointer-events: none;
+}
+
+.invitaciones__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.invitaciones__texto { color: var(--texto-suave); font-size: 1.1rem; margin-bottom: 32px; }
+
+.invitaciones__tipos { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.invitaciones__tipos li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  background: linear-gradient(180deg, var(--capa-1), var(--capa-2));
+  transition:
+    opacity 0.9s var(--curva),
+    transform 0.6s var(--curva),
+    border-color 0.4s;
+  transition-delay: var(--retraso, 0ms), 0ms, 0ms;
+}
+.invitaciones__tipos li:hover { border-color: var(--borde-fuerte); }
+.invitaciones__tipos strong { display: block; color: var(--titulo); font-weight: 600; line-height: 1.3; }
+.invitaciones__tipos small { display: block; color: var(--texto-suave); font-size: 0.95rem; line-height: 1.5; margin-top: 2px; }
+
+.invitaciones__icono {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  color: var(--acento);
+  background: var(--acento-glow);
+}
+
+/* Formulario */
+.invitaciones__form {
+  padding: 32px;
+  border: 1px solid var(--borde-fuerte);
+  border-radius: calc(var(--radio) + 4px);
+  background: var(--fondo-elevado);
+  box-shadow: 0 30px 80px -40px rgba(0, 0, 0, 0.55);
+}
+
+.invitaciones__cabecera {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--borde);
+  color: var(--acento);
+}
+.invitaciones__cabecera strong { display: block; color: var(--titulo); font-family: var(--fuente-titulos); font-size: 1.15rem; }
+.invitaciones__cabecera small { color: var(--texto-tenue); font-size: 0.92rem; }
+
+.campos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.campo { display: grid; gap: 6px; min-width: 0; }
+.campo--ancho { grid-column: 1 / -1; }
+.campo span { font-size: 0.88rem; font-weight: 600; color: var(--texto-suave); }
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--titulo);
+  background: var(--fondo);
+  border: 1px solid var(--borde-fuerte);
+  border-radius: min(var(--radio), 12px);
+  transition: border-color 0.25s, box-shadow 0.25s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.campo textarea { resize: vertical; min-height: 96px; }
+.campo select {
+  background-image: linear-gradient(45deg, transparent 50%, var(--acento) 50%), linear-gradient(135deg, var(--acento) 50%, transparent 50%);
+  background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 40px;
+}
+.campo input::placeholder,
+.campo textarea::placeholder { color: var(--texto-tenue); }
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--acento);
+  box-shadow: 0 0 0 4px var(--acento-glow);
+}
+
+.invitaciones__aviso { margin: 16px 0 0; color: var(--acento); font-size: 0.95rem; }
+
+.invitaciones__acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.invitaciones__acciones .boton { flex: 1 1 auto; justify-content: center; }
+
+.invitaciones__nota { margin: 16px 0 0; font-size: 0.88rem; color: var(--texto-tenue); text-align: center; }
+
+@media (max-width: 900px) {
+  .invitaciones__grid { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 560px) {
+  .invitaciones__form { padding: 22px 18px; }
+  .campos { grid-template-columns: 1fr; }
+  .invitaciones__acciones { flex-direction: column; }
+  .invitaciones__brillo { width: 380px; height: 380px; }
+}

@@ -3,16 +3,20 @@
 import { leer } from '../lib/contenido'
 
 const inicio = leer('inicio')
-const tema = leer('tema')
+export const tema = leer('tema')
 
 export const portada = inicio.portada
 export const biografia = inicio.biografia
 export const mision = inicio.mision
+export const mensaje = inicio.mensaje || {}
 
 // Secciones que el panel (Diseño) puede ocultar. Si falta el dato, se muestra.
 export const secciones = {
+  redes: true,
   biografia: true,
+  mensajes: true,
   ministerios: true,
+  invitaciones: true,
   vida_bendecida: true,
   eventos: true,
   testimonios: true,
@@ -24,3 +28,4 @@ export const ministerios = leer('ministerios').map((m) => ({ ...m, enlace: m.enl
 export const vidaBendecida = leer('vida-bendecida')
 export const eventos = leer('eventos').filter((e) => e.titulo && e.fecha)
 export const testimonios = leer('testimonios').filter((t) => t.nombre && t.texto)
+export const invitaciones = leer('invitaciones') || {}

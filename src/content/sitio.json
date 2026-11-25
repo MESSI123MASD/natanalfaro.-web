@@ -9,28 +9,47 @@
   },
   "redes": [
     {
+      "nombre": "WhatsApp",
+      "usuario": "+505 8881 8881",
+      "url": "https://wa.me/50588818881",
+      "icono": "whatsapp",
+      "destacada": true
+    },
+    {
       "nombre": "Facebook",
-      "url": "https://www.facebook.com/PastorNatanAlfaro"
+      "usuario": "Pastor Natán Alfaro",
+      "url": "https://www.facebook.com/PastorNatanAlfaro",
+      "icono": "facebook",
+      "destacada": true
     },
     {
       "nombre": "Instagram",
-      "url": "https://www.instagram.com/natanalfaro/"
+      "usuario": "@natanalfaro",
+      "url": "https://www.instagram.com/natanalfaro/",
+      "icono": "instagram",
+      "destacada": true
     },
     {
       "nombre": "YouTube",
-      "url": "https://www.youtube.com/channel/UCtJO0gSt8SCOkijxKb264Cg"
+      "usuario": "Pastor Natán Alfaro",
+      "url": "https://www.youtube.com/channel/UCtJO0gSt8SCOkijxKb264Cg?sub_confirmation=1",
+      "icono": "youtube",
+      "destacada": true
     },
     {
-      "nombre": "X (Twitter)",
-      "url": "https://twitter.com/NatanAlfaro"
+      "nombre": "X",
+      "usuario": "@NatanAlfaro",
+      "url": "https://x.com/NatanAlfaro",
+      "icono": "x",
+      "destacada": false
     },
     {
       "nombre": "Spotify",
-      "url": "https://open.spotify.com/show/6vP6JmsFBu0Xil3Nv8FmMA"
-    },
-    {
-      "nombre": "SoundCloud",
-      "url": "https://soundcloud.com/pastor-nat-n-alfaro"
+      "usuario": "Podcast",
+      "url": "https://open.spotify.com/show/6vP6JmsFBu0Xil3Nv8FmMA",
+      "icono": "audio",
+      "destacada": false
     }
-  ]
+  ],
+  "descripcion": "Fundador y Pastor Principal de Casa de Mi Gloria. Plantador de iglesias, líder misional y conferencista internacional."
 }

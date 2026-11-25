@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Carpetas que no son parte del sitio (nunca subir a GitHub)
+/natanalfaro-web/
+/Claude outputs/

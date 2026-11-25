@@ -1,0 +1,29 @@
+{
+  "titulo": "Invita al Pastor Natán",
+  "texto": "Si deseas que el Pastor Natán Alfaro ministre en tu iglesia, congreso o evento, envíanos tu invitación. Nuestro equipo revisará su agenda y te responderá lo antes posible.",
+  "whatsapp": "50588818881",
+  "email": "pastor@casademigloria.org",
+  "tipos": [
+    {
+      "nombre": "Conferencias y congresos",
+      "texto": "Liderazgo, matrimonios, familia y visión misional.",
+      "icono": "microfono"
+    },
+    {
+      "nombre": "Cultos y servicios especiales",
+      "texto": "Predicación en iglesias de Nicaragua y el extranjero.",
+      "icono": "iglesia"
+    },
+    {
+      "nombre": "Capacitación de líderes",
+      "texto": "Talleres y retiros para pastores y equipos ministeriales.",
+      "icono": "usuarios"
+    },
+    {
+      "nombre": "Medios y entrevistas",
+      "texto": "Radio, televisión, podcasts y transmisiones.",
+      "icono": "audio"
+    }
+  ],
+  "nota": "Te recomendamos escribir con al menos 2 meses de anticipación."
+}

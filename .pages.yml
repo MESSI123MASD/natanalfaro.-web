@@ -22,6 +22,11 @@ content:
               label: Oscuro (fondo negro)
             - name: claro
               label: Claro (fondo blanco)
+      - name: boton_modo
+        label: Mostrar botón sol/luna para que cada visitante elija oscuro o claro
+        description: El "Modo" de arriba es el que se ve la primera vez.
+        type: boolean
+        default: true
       - name: paleta
         label: Paleta de colores
         description: Colores probados para que todo se lea bien. Elige "Personalizada" para usar tus propios colores abajo.
@@ -98,12 +103,24 @@ content:
         label: Secciones visibles en el inicio
         type: object
         fields:
+          - name: redes
+            label: Sígueme en redes
+            type: boolean
+            default: true
           - name: biografia
             label: Biografía
             type: boolean
             default: true
+          - name: mensajes
+            label: Mensajes (YouTube)
+            type: boolean
+            default: true
           - name: ministerios
             label: Ministerios
+            type: boolean
+            default: true
+          - name: invitaciones
+            label: Invitaciones y agenda
             type: boolean
             default: true
           - name: vida_bendecida
@@ -130,21 +147,21 @@ content:
         type: object
         fields:
           - name: etiqueta
-            label: Texto pequeño sobre el título
+            label: Texto pequeño sobre el nombre
             type: string
-          - name: titulo
-            label: Título (parte blanca)
+          - name: nombre
+            label: Nombre (título grande)
             type: string
             required: true
-          - name: titulo_resaltado
-            label: Título (parte dorada, al final)
+          - name: frase
+            label: Frase destacada (en dorado)
             type: string
           - name: texto
-            label: Texto debajo del título
+            label: Descripción
             type: text
-          - name: imagen_fondo
-            label: Imagen de fondo
-            description: Horizontal, idealmente 1920 × 1080 px.
+          - name: foto
+            label: Foto principal
+            description: Cuadrada, idealmente 900 × 900 px o más.
             type: image
       - name: biografia
         label: Biografía
@@ -163,6 +180,20 @@ content:
       - name: mision
         label: Frase de misión (cita grande)
         type: text
+      - name: mensaje
+        label: Sección Mensajes (YouTube)
+        type: object
+        fields:
+          - name: titulo
+            label: Etiqueta
+            type: string
+          - name: texto
+            label: Texto
+            type: text
+          - name: youtube_lista
+            label: ID de lista o canal de YouTube
+            description: Para los últimos videos del canal, el ID empieza con UU (es el del canal cambiando UC por UU).
+            type: string
 
   - name: ministerios
     label: Ministerios
@@ -184,6 +215,44 @@ content:
         type: image
       - name: enlace
         label: Enlace "Conocer más" (opcional)
+        type: string
+
+  - name: invitaciones
+    label: Invitaciones y agenda
+    type: file
+    path: src/content/invitaciones.json
+    format: json
+    fields:
+      - name: titulo
+        label: Título
+        type: string
+      - name: texto
+        label: Texto de introducción
+        type: text
+      - name: whatsapp
+        label: WhatsApp que recibe las invitaciones (solo números, con código de país)
+        type: string
+      - name: email
+        label: Correo que recibe las invitaciones
+        type: string
+      - name: tipos
+        label: Tipos de invitación
+        type: object
+        list: true
+        fields:
+          - name: nombre
+            label: Nombre
+            type: string
+          - name: texto
+            label: Descripción corta
+            type: string
+          - name: icono
+            label: Ícono
+            type: select
+            options:
+              values: [microfono, iglesia, usuarios, audio, calendario, web]
+      - name: nota
+        label: Nota debajo del formulario
         type: string
 
   - name: eventos
@@ -335,6 +404,9 @@ content:
       - name: lema
         label: Lema (pie de página)
         type: string
+      - name: descripcion
+        label: Descripción corta
+        type: text
       - name: contacto
         label: Contacto
         type: object
@@ -353,12 +425,24 @@ content:
             type: string
       - name: redes
         label: Redes sociales
+        description: Las marcadas como "Acceso rápido" aparecen en la portada y en el botón flotante.
         type: object
         list: true
         fields:
           - name: nombre
             label: Nombre
             type: string
+          - name: usuario
+            label: Usuario o texto corto (ej. @natanalfaro)
+            type: string
           - name: url
             label: Enlace
             type: string
+          - name: icono
+            label: Ícono
+            type: select
+            options:
+              values: [whatsapp, facebook, instagram, youtube, x, telegram, audio, correo, web]
+          - name: destacada
+            label: Acceso rápido
+            type: boolean

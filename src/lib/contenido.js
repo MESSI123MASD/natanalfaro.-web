@@ -11,6 +11,7 @@ import eventos from '../content/eventos.json'
 import testimonios from '../content/testimonios.json'
 import ofrenda from '../content/ofrenda.json'
 import tema from '../content/tema.json'
+import invitaciones from '../content/invitaciones.json'
 
 export const PUBLICADO = {
   sitio,
@@ -21,6 +22,7 @@ export const PUBLICADO = {
   testimonios,
   ofrenda,
   tema,
+  invitaciones,
 }
 
 export const ARCHIVOS = Object.keys(PUBLICADO)

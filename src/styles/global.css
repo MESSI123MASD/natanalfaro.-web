@@ -36,7 +36,22 @@
   --curva: cubic-bezier(0.22, 1, 0.36, 1);   /* salida suave para animaciones */
 
   color-scheme: only dark;
+  /* Que ningún modo de alto contraste o "oscuro forzado" cambie nuestros colores */
+  forced-color-adjust: none;
 }
+
+/* ----- Protección contra el "modo oscuro forzado" de los teléfonos -----
+   Samsung Internet, Chrome y el navegador de WhatsApp/Facebook recolorean las páginas que
+   "no tienen modo oscuro" y vuelven café/rojizo el dorado. Estas reglas declaran que el
+   sitio sí maneja ambos modos, así el teléfono respeta los colores del sitio. */
+@media (prefers-color-scheme: dark) {
+  :root { forced-color-adjust: none; }
+}
+@media (prefers-color-scheme: light) {
+  :root { forced-color-adjust: none; }
+}
+:root[data-modo='claro'] { color-scheme: only light; }
+:root[data-modo='oscuro'] { color-scheme: only dark; }
 
 *,
 *::before,

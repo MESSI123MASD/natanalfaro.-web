@@ -4,6 +4,7 @@ import Header from './Header'
 import Footer from './Footer'
 import useRevelar from '../hooks/useRevelar'
 import BarraVistaPrevia from './BarraVistaPrevia'
+import RedesFlotantes from './RedesFlotantes'
 
 // Al cambiar de ruta: si hay #ancla, baja a esa sección; si no, sube al inicio.
 function DesplazamientoAutomatico() {
@@ -36,6 +37,7 @@ export default function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <RedesFlotantes />
       <BarraVistaPrevia />
     </>
   )

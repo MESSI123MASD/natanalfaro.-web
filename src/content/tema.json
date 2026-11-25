@@ -1,5 +1,6 @@
 {
   "modo": "oscuro",
+  "boton_modo": true,
   "paleta": "dorado",
   "color_acento": "",
   "color_fondo": "",
@@ -9,8 +10,11 @@
   "esquinas": "redondeadas",
   "animaciones": true,
   "secciones": {
+    "redes": true,
     "biografia": true,
+    "mensajes": true,
     "ministerios": true,
+    "invitaciones": true,
     "vida_bendecida": true,
     "eventos": true,
     "testimonios": true

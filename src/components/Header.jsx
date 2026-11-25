@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { navegacion, sitio } from '../data/site'
+import BotonModo from './BotonModo'
 import './Header.css'
 
 export default function Header() {
@@ -51,6 +52,8 @@ export default function Header() {
           </span>
         </Link>
 
+        <div className="header__herramientas">
+          <BotonModo />
         <button
           className="header__toggle"
           aria-expanded={abierto}
@@ -62,6 +65,7 @@ export default function Header() {
           <span />
           <span />
         </button>
+        </div>
 
         <nav id="menu-principal" className={`header__nav ${abierto ? 'is-abierto' : ''}`}>
           <ul>

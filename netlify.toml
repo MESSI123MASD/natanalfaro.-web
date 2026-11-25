@@ -1,0 +1,16 @@
+# Configuración para Netlify (sitio de pruebas)
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Sitio de una sola página: cualquier ruta (ej. /ofrenda) carga index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Es una copia de prueba: que Google no la indexe (el sitio oficial es natanalfaro.org)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

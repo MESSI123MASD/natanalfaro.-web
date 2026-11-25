@@ -19,9 +19,11 @@ export default function Ministerios() {
               className="tarjeta revelar"
               style={{ '--retraso': `${(i % 3) * 90}ms` }}
             >
-              <div className="tarjeta__media">
-                <Imagen src={m.imagen} alt={m.nombre} className="tarjeta__imagen" />
-              </div>
+              {m.imagen && (
+                <div className="tarjeta__media">
+                  <Imagen src={m.imagen} alt={m.nombre} className="tarjeta__imagen" />
+                </div>
+              )}
               <div className="tarjeta__cuerpo">
                 <span className="tarjeta__numero">{String(i + 1).padStart(2, '0')}</span>
                 <h3>{m.nombre}</h3>

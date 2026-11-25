@@ -1,0 +1,48 @@
+.redes__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.red {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: var(--radio);
+  border: 1px solid var(--borde);
+  background: var(--fondo-elevado);
+  color: var(--texto);
+  text-decoration: none;
+  transition: transform 0.4s var(--curva), border-color 0.3s, box-shadow 0.4s var(--curva);
+}
+
+.red__icono {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--acento-glow);
+  color: var(--acento);
+  transition: background 0.3s, color 0.3s;
+}
+
+.red__texto { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.red__texto strong { font-family: var(--fuente-titulos); font-weight: 600; color: var(--titulo); }
+.red__texto small { color: var(--texto-suave); font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.red__flecha { color: var(--texto-tenue); transition: transform 0.35s var(--curva), color 0.3s; }
+
+.red:hover { transform: translateY(-3px); border-color: var(--acento); box-shadow: 0 18px 40px -22px var(--acento-glow); }
+.red:hover .red__icono { background: var(--acento); color: var(--acento-texto); }
+.red:hover .red__flecha { transform: translateX(4px); color: var(--acento); }
+
+@media (hover: none) {
+  .red:hover { transform: none; }
+}

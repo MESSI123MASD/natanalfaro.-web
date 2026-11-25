@@ -98,6 +98,7 @@ export function calcularVariables(tema = {}) {
     '--tema-texto': texto,
     '--tema-texto-suave': textoSuave,
     '--acento': claro ? acentoTexto : acento,
+    '--acento-portada': acento, // la portada siempre es oscura: usa el acento sin oscurecer
     '--acento-claro': mezclar(acento, blanco, 0.35),
     '--acento-glow': rgba(acento, 0.18),
     '--acento-texto': contraste(claro ? acentoTexto : acento, '#0a0a0a') >= 4.5 ? '#0a0a0a' : '#ffffff',
@@ -142,12 +143,48 @@ function meta(nombre, valor) {
   m.content = valor
 }
 
+// ---------- Modo elegido por el visitante (botón sol/luna). Se guarda solo en su navegador.
+const CLAVE_MODO = 'natanalfaro-modo'
+let temaBase = {}
+
+export function modoGuardado() {
+  try {
+    const m = localStorage.getItem(CLAVE_MODO)
+    return m === 'claro' || m === 'oscuro' ? m : null
+  } catch {
+    return null
+  }
+}
+
+export const modoActual = () => modoGuardado() || (temaBase.modo === 'claro' ? 'claro' : 'oscuro')
+
+export function cambiarModo(modo) {
+  const raiz = document.documentElement
+  raiz.classList.add('cambiando-modo')
+  setTimeout(() => raiz.classList.remove('cambiando-modo'), 500)
+  try {
+    localStorage.setItem(CLAVE_MODO, modo)
+  } catch {
+    /* navegador sin almacenamiento: cambia solo mientras está abierta la página */
+  }
+  pintar({ ...temaBase, modo })
+}
+
+// Aplica el diseño del panel; si el visitante eligió un modo con el botón, ese manda.
 export function aplicarTema(tema = {}) {
+  temaBase = tema
+  const modo = tema.boton_modo === false ? tema.modo : modoGuardado() || tema.modo
+  pintar({ ...tema, modo })
+}
+
+function pintar(tema) {
   const raiz = document.documentElement
   const vars = calcularVariables(tema)
   Object.entries(vars).forEach(([k, v]) => raiz.style.setProperty(k, v))
   raiz.style.fontSize = TAMANOS[tema.tamano_texto] || TAMANOS.normal
+  // "only ..." le dice al teléfono que la página ya tiene su propio modo: no debe recolorearla
   raiz.style.colorScheme = tema.modo === 'claro' ? 'only light' : 'only dark'
+  raiz.dataset.modo = tema.modo === 'claro' ? 'claro' : 'oscuro'
   raiz.classList.toggle('sin-animaciones', tema.animaciones === false)
   meta('theme-color', vars['--fondo'])
   meta('color-scheme', tema.modo === 'claro' ? 'only light' : 'only dark')
