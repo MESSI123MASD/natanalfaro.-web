@@ -1,0 +1,23 @@
+{
+  "titulo": "Visítanos en Casa de Mi Gloria",
+  "texto": "Te esperamos cada domingo. Ven con tu familia: aquí siempre hay un lugar para ti.",
+  "horarios": [
+    {
+      "dia": "Domingo",
+      "horas": [
+        "8:00 am",
+        "10:00 am",
+        "2:00 pm"
+      ],
+      "nota": "Presencial y en vivo por redes"
+    }
+  ],
+  "direccion": "Rotonda Universitaria 200 mts. abajo, Managua, Nicaragua",
+  "mapa": "Casa de Mi Gloria, Managua, Nicaragua",
+  "en_vivo": {
+    "modo": "automatico",
+    "texto": "El Pastor Natán está en vivo ahora",
+    "url": "https://www.youtube.com/channel/UCtJO0gSt8SCOkijxKb264Cg/live",
+    "duracion_minutos": 100
+  }
+}

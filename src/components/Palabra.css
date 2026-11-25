@@ -1,0 +1,48 @@
+.palabra { padding: 0 0 96px; }
+
+.palabra__tarjeta {
+  position: relative;
+  margin: 0 auto;
+  max-width: 860px;
+  padding: 56px 48px;
+  text-align: center;
+  border-radius: calc(var(--radio) + 8px);
+  border: 1px solid var(--borde-fuerte);
+  background:
+    radial-gradient(ellipse at 50% 0%, var(--acento-glow), transparent 70%),
+    linear-gradient(180deg, var(--capa-1), var(--capa-2));
+  overflow: hidden;
+}
+.palabra__tarjeta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--acento), transparent);
+}
+.palabra__tarjeta .seccion__etiqueta { justify-content: center; }
+.palabra__tarjeta .seccion__etiqueta::before { display: none; }
+
+.palabra blockquote {
+  margin: 0;
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  color: var(--titulo);
+}
+.palabra figcaption {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--acento);
+}
+
+@media (max-width: 640px) {
+  .palabra { padding-bottom: 72px; }
+  .palabra__tarjeta { padding: 40px 22px; }
+}

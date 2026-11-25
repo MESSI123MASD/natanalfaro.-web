@@ -20,5 +20,61 @@
     "titulo": "Mensajes",
     "texto": "Prédicas, series y reflexiones para tu semana. Nuevos mensajes cada semana en YouTube.",
     "youtube_lista": "UUtJO0gSt8SCOkijxKb264Cg"
+  },
+  "palabra": {
+    "titulo": "Palabra para hoy",
+    "texto": "Hoy es el primer día del resto de tu vida bendecida. Lo que Dios empezó en ti, Él mismo lo va a terminar.",
+    "cita": "Filipenses 1:6",
+    "texto_en": "Today is the first day of the rest of your blessed life. What God started in you, He Himself will finish.",
+    "cita_en": "Philippians 1:6"
+  },
+  "trayectoria": [
+    {
+      "numero": 30,
+      "prefijo": "+",
+      "texto": "años en el ministerio"
+    },
+    {
+      "numero": 16,
+      "prefijo": "",
+      "texto": "años pastoreando Casa de Mi Gloria"
+    },
+    {
+      "numero": 200,
+      "prefijo": "",
+      "texto": "niños atendidos cada semana en Acahualinca"
+    },
+    {
+      "numero": 6,
+      "prefijo": "",
+      "texto": "ministerios y proyectos"
+    }
+  ],
+  "radio": {
+    "titulo": "Faro del Espíritu",
+    "texto": "Programa radial con la Biblia como base, con temas para alimentar tu vida espiritual. Dirigido por el Pastor Natán Alfaro.",
+    "frecuencia": "",
+    "url": "https://farodelespiritu.com/",
+    "boton": "Escuchar Faro del Espíritu"
+  },
+  "matrimonios": {
+    "titulo": "Matrimonios indestructibles",
+    "texto": "Natán y Cristina Alfaro creen que un matrimonio con Dios en el centro puede superar cualquier tormenta. Por eso fundaron dos ministerios para fortalecer a las parejas.",
+    "ministerios": [
+      {
+        "nombre": "Congreso Enamorados",
+        "texto": "Congreso anual para desarrollar matrimonios indestructibles bajo el modelo bíblico, con Dios en el centro.",
+        "fecha": "",
+        "lugar": "",
+        "boton": "Quiero información del congreso"
+      },
+      {
+        "nombre": "Defensores del Pacto",
+        "texto": "Ministerio matrimonial que acompaña a las parejas a cuidar y defender el pacto que hicieron delante de Dios.",
+        "fecha": "",
+        "lugar": "",
+        "boton": "Quiero ser parte"
+      }
+    ]
   }
 }

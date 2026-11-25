@@ -1,4 +1,5 @@
 import { vidaBendecida } from '../data/contenido'
+import { t } from '../lib/idioma'
 import './VidaBendecida.css'
 
 export default function VidaBendecida() {
@@ -8,7 +9,7 @@ export default function VidaBendecida() {
       <div className="contenedor">
         <div className="seccion__encabezado seccion__encabezado--centro revelar">
           <span className="seccion__etiqueta">Vida Bendecida</span>
-          <h2>Una palabra para tu día</h2>
+          <h2>{t('Una palabra para tu día', 'A word for your day')}</h2>
           <p>{vidaBendecida.intro}</p>
         </div>
 
@@ -25,7 +26,7 @@ export default function VidaBendecida() {
         </div>
 
         <p className="vida__redes revelar">
-          También en:{' '}
+          {t('También en:', 'Also on:')}{' '}
           {vidaBendecida.redes.map((r, i) => (
             <span key={r.nombre}>
               <a href={r.url} target="_blank" rel="noopener noreferrer">{r.nombre}</a>

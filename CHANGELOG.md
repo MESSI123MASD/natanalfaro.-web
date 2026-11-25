@@ -10,6 +10,20 @@ Mientras el sitio esté en construcción usamos `0.x`. Al publicarlo en natanalf
 
 ## [Sin publicar]
 
+## [0.9.0] - 2026-11-25
+
+### Agregado
+- Aviso dorado "EN VIVO" arriba de todo: se enciende solo durante los cultos (domingo 8:00, 10:00 y 2:00, hora de Nicaragua) o a mano desde el panel.
+- Sección "Visítanos": horarios de culto, dirección, botón "Cómo llegar" y mapa.
+- Trayectoria en números con contador animado.
+- "Palabra para hoy": frase o versículo editable desde el panel.
+- Faro del Espíritu: tarjeta del programa de radio con botón para escuchar.
+- Matrimonios: Congreso Enamorados y Defensores del Pacto, con fecha opcional y botón de WhatsApp.
+- Versión en inglés: botón ES/EN en el menú (enlace directo con ?lang=en). Traducciones en src/content/en.json.
+
+### Cambiado
+- Menú: se quita "Inicio" (el nombre lleva al inicio) y se agrega "Visítanos".
+
 ## [0.8.0] - 2026-11-25
 
 ### Agregado

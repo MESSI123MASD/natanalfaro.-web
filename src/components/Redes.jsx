@@ -1,5 +1,6 @@
 import { redes } from '../data/site'
 import Icono from './Icono'
+import { t } from '../lib/idioma'
 import './Redes.css'
 
 // Todas sus redes, con su usuario, a un clic
@@ -10,9 +11,9 @@ export default function Redes() {
     <section id="redes" className="seccion redes">
       <div className="contenedor">
         <div className="seccion__encabezado seccion__encabezado--centro revelar">
-          <span className="seccion__etiqueta">Conéctate</span>
-          <h2>Sígueme en redes</h2>
-          <p>Mensajes, reflexiones y transmisiones en vivo cada semana.</p>
+          <span className="seccion__etiqueta">{t('Conéctate', 'Connect')}</span>
+          <h2>{t('Sígueme en redes', 'Follow me')}</h2>
+          <p>{t('Mensajes, reflexiones y transmisiones en vivo cada semana.', 'Messages, reflections and live streams every week.')}</p>
         </div>
 
         <ul className="redes__lista">

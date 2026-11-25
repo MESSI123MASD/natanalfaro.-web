@@ -1,0 +1,89 @@
+.visitanos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.visitanos__texto { color: var(--texto-suave); font-size: 1.1rem; margin-bottom: 32px; }
+
+.horario {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 22px 0;
+  border-top: 1px solid var(--borde);
+  border-bottom: 1px solid var(--borde);
+}
+.horario + .horario { border-top: 0; }
+.horario__dia strong { display: block; font-family: var(--fuente-titulos); font-size: 1.25rem; color: var(--titulo); }
+.horario__dia small { color: var(--texto-tenue); font-size: 0.92rem; }
+
+.horario__horas { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.horario__horas li {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--borde-fuerte);
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--acento);
+  white-space: nowrap;
+}
+
+.visitanos__direccion { display: flex; gap: 10px; align-items: flex-start; margin: 24px 0 28px; color: var(--texto-suave); }
+.visitanos__direccion svg { color: var(--acento); flex-shrink: 0; margin-top: 4px; }
+.visitanos__acciones { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.visitanos__mapa {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: calc(var(--radio) + 4px);
+  overflow: hidden;
+  border: 1px solid var(--borde-fuerte);
+  background: var(--fondo-elevado);
+}
+.visitanos__mapa iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+.visitanos__ver-mapa {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  color: var(--titulo);
+  background:
+    radial-gradient(circle at 50% 45%, var(--acento-glow), transparent 55%),
+    repeating-linear-gradient(0deg, transparent 0 39px, var(--borde) 39px 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, var(--borde) 39px 40px),
+    var(--fondo-elevado);
+}
+.visitanos__pin {
+  width: 34px;
+  height: 34px;
+  border-radius: 50% 50% 50% 0;
+  background: var(--acento);
+  transform: rotate(-45deg);
+  box-shadow: 0 0 0 10px var(--acento-glow);
+  animation: rebote-pin 2s var(--curva) infinite;
+}
+@keyframes rebote-pin {
+  0%, 100% { transform: rotate(-45deg) translate(0, 0); }
+  50% { transform: rotate(-45deg) translate(4px, -4px); }
+}
+.sin-animaciones .visitanos__pin { animation: none; }
+
+@media (max-width: 900px) {
+  .visitanos { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 480px) {
+  .horario { grid-template-columns: 1fr; }
+  .horario__horas { justify-content: flex-start; }
+  .visitanos__acciones .boton { width: 100%; }
+}

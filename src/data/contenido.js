@@ -9,10 +9,20 @@ export const portada = inicio.portada
 export const biografia = inicio.biografia
 export const mision = inicio.mision
 export const mensaje = inicio.mensaje || {}
+export const palabra = inicio.palabra || {}
+export const trayectoria = (inicio.trayectoria || []).filter((d) => d.numero !== '' && d.numero !== undefined && d.texto)
+export const radio = inicio.radio || {}
+export const matrimonios = { ...(inicio.matrimonios || {}), ministerios: (inicio.matrimonios?.ministerios || []).filter((m) => m.nombre) }
+export const iglesia = leer('iglesia') || {}
 
 // Secciones que el panel (Diseño) puede ocultar. Si falta el dato, se muestra.
 export const secciones = {
   redes: true,
+  palabra: true,
+  trayectoria: true,
+  radio: true,
+  matrimonios: true,
+  horarios: true,
   biografia: true,
   mensajes: true,
   ministerios: true,

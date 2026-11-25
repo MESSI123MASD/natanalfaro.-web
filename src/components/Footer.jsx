@@ -1,4 +1,5 @@
 import { contacto, redes, sitio } from '../data/site'
+import { t } from '../lib/idioma'
 import './Footer.css'
 
 export default function Footer() {
@@ -13,7 +14,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="footer__titulo">Contacto</h3>
+          <h3 className="footer__titulo">{t('Contacto', 'Contact')}</h3>
           <address className="footer__contacto">
             <p>{contacto.direccion}</p>
             <p><a href={contacto.telefonoLink}>{contacto.telefono}</a></p>
@@ -22,7 +23,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="footer__titulo">Síguenos</h3>
+          <h3 className="footer__titulo">{t('Síguenos', 'Follow us')}</h3>
           <ul className="footer__redes">
             {redes.map((red) => (
               <li key={red.nombre}>
@@ -35,7 +36,7 @@ export default function Footer() {
 
       <div className="footer__base">
         <div className="contenedor">
-          <span>© {anio} {sitio.nombre}. Todos los derechos reservados.</span>
+          <span>© {anio} {sitio.nombre}. {t('Todos los derechos reservados.', 'All rights reserved.')}</span>
           <span className="footer__version">v{__APP_VERSION__}</span>
         </div>
       </div>

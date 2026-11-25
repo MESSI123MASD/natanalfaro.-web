@@ -1,5 +1,6 @@
 import { biografia, mision } from '../data/contenido'
 import Imagen from './Imagen'
+import { t } from '../lib/idioma'
 import './Biografia.css'
 
 export default function Biografia() {
@@ -11,7 +12,7 @@ export default function Biografia() {
         </div>
 
         <div className="revelar" style={{ '--retraso': '120ms' }}>
-          <span className="seccion__etiqueta">Biografía</span>
+          <span className="seccion__etiqueta">{t('Biografía', 'About')}</span>
           <h2>{biografia.titulo}</h2>
           {biografia.parrafos.map((p) => (
             <p key={p.slice(0, 20)} className="biografia__texto">{p}</p>

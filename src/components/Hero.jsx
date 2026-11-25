@@ -1,6 +1,7 @@
 import { portada } from '../data/contenido'
 import { redesDestacadas } from '../data/site'
 import Icono from './Icono'
+import { t } from '../lib/idioma'
 import './Hero.css'
 
 export default function Hero() {
@@ -33,7 +34,7 @@ export default function Hero() {
 
           {/* Acceso inmediato a sus redes: lo más importante para el pastor */}
           {redesDestacadas.length > 0 && (
-            <ul className="hero__redes hero__entrada" style={{ '--retraso': '400ms' }} aria-label="Redes sociales">
+            <ul className="hero__redes hero__entrada" style={{ '--retraso': '400ms' }} aria-label={t('Redes sociales', 'Social media')}>
               {redesDestacadas.map((r) => (
                 <li key={r.nombre}>
                   <a href={r.url} target="_blank" rel="noopener noreferrer" className="hero__red">
@@ -46,9 +47,9 @@ export default function Hero() {
           )}
 
           <div className="hero__acciones hero__entrada" style={{ '--retraso': '500ms' }}>
-            <a href="#vida-bendecida" className="boton boton--primario">Recibe Vida Bendecida</a>
+            <a href="#vida-bendecida" className="boton boton--primario">{t('Recibe Vida Bendecida', 'Get Vida Bendecida')}</a>
             <a href="#invitaciones" className="boton boton--secundario">
-              <Icono nombre="calendario" tamano={18} /> Invitaciones y agenda
+              <Icono nombre="calendario" tamano={18} /> {t('Invitaciones y agenda', 'Invitations')}
             </a>
           </div>
         </div>
@@ -62,7 +63,7 @@ export default function Hero() {
         )}
       </div>
 
-      <a href="#redes" className="hero__bajar" aria-label="Bajar">
+      <a href="#redes" className="hero__bajar" aria-label={t('Bajar', 'Scroll down')}>
         <span />
       </a>
     </section>

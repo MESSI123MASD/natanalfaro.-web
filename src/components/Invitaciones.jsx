@@ -2,9 +2,12 @@ import { useState } from 'react'
 import { invitaciones as datos } from '../data/contenido'
 import { contacto } from '../data/site'
 import Icono from './Icono'
+import { enIngles, t } from '../lib/idioma'
 import './Invitaciones.css'
 
-const TIPOS_EVENTO = ['Conferencia o congreso', 'Culto o servicio especial', 'Capacitación de líderes', 'Entrevista o medios', 'Otro']
+const TIPOS_EVENTO = enIngles
+  ? ['Conference or congress', 'Service or special event', 'Leadership training', 'Interview or media', 'Other']
+  : ['Conferencia o congreso', 'Culto o servicio especial', 'Capacitación de líderes', 'Entrevista o medios', 'Otro']
 
 // Invitaciones y agenda: el formulario arma el mensaje y lo abre en WhatsApp (o correo).
 // No guarda nada en el sitio: la invitación llega directo al equipo del pastor.
@@ -18,14 +21,14 @@ export default function Invitaciones() {
 
   const mensaje = () =>
     [
-      'Hola, quiero invitar al Pastor Natán Alfaro.',
+      t('Hola, quiero invitar al Pastor Natán Alfaro.', 'Hello, I would like to invite Pastor Natán Alfaro.'),
       '',
-      `Nombre: ${f.nombre}`,
-      `Iglesia u organización: ${f.organizacion}`,
-      `Tipo de evento: ${f.tipo}`,
-      `Fecha: ${f.fecha ? new Date(f.fecha + 'T12:00').toLocaleDateString('es-NI', { dateStyle: 'long' }) : 'Por definir'}`,
-      `Ciudad y país: ${f.lugar}`,
-      f.detalles.trim() ? `Detalles: ${f.detalles.trim()}` : null,
+      `${t('Nombre', 'Name')}: ${f.nombre}`,
+      `${t('Iglesia u organización', 'Church or organization')}: ${f.organizacion}`,
+      `${t('Tipo de evento', 'Event type')}: ${f.tipo}`,
+      `${t('Fecha', 'Date')}: ${f.fecha ? new Date(f.fecha + 'T12:00').toLocaleDateString(t('es-NI', 'en-US'), { dateStyle: 'long' }) : t('Por definir', 'To be defined')}`,
+      `${t('Ciudad y país', 'City and country')}: ${f.lugar}`,
+      f.detalles.trim() ? `${t('Detalles', 'Details')}: ${f.detalles.trim()}` : null,
     ]
       .filter((l) => l !== null)
       .join('\n')
@@ -34,15 +37,15 @@ export default function Invitaciones() {
 
   const enviar = (e) => {
     e.preventDefault()
-    if (!valido) return setAviso('Completa tu nombre, la organización y la ciudad.')
+    if (!valido) return setAviso(t('Completa tu nombre, la organización y la ciudad.', 'Please fill in your name, organization and city.'))
     setAviso('')
     window.open(`https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje())}`, '_blank', 'noopener')
   }
 
   const porCorreo = () => {
-    if (!valido) return setAviso('Completa tu nombre, la organización y la ciudad.')
+    if (!valido) return setAviso(t('Completa tu nombre, la organización y la ciudad.', 'Please fill in your name, organization and city.'))
     setAviso('')
-    const asunto = `Invitación para el Pastor Natán Alfaro — ${f.organizacion}`
+    const asunto = `${t('Invitación para el Pastor Natán Alfaro', 'Invitation for Pastor Natán Alfaro')} — ${f.organizacion}`
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(mensaje())}`
   }
 
@@ -51,8 +54,8 @@ export default function Invitaciones() {
       <div className="invitaciones__brillo" aria-hidden="true" />
       <div className="contenedor invitaciones__grid">
         <div className="invitaciones__info revelar">
-          <span className="seccion__etiqueta">Invitaciones y agenda</span>
-          <h2>{datos.titulo || 'Invita al Pastor Natán'}</h2>
+          <span className="seccion__etiqueta">{t('Invitaciones y agenda', 'Invitations and schedule')}</span>
+          <h2>{datos.titulo || t('Invita al Pastor Natán', 'Invite Pastor Natán')}</h2>
           <p className="invitaciones__texto">{datos.texto}</p>
 
           <ul className="invitaciones__tipos">
@@ -72,37 +75,37 @@ export default function Invitaciones() {
           <div className="invitaciones__cabecera">
             <Icono nombre="calendario" tamano={22} />
             <div>
-              <strong>Solicitar fecha</strong>
-              <small>Te respondemos por WhatsApp o correo</small>
+              <strong>{t('Solicitar fecha', 'Request a date')}</strong>
+              <small>{t('Te respondemos por WhatsApp o correo', 'We will reply by WhatsApp or email')}</small>
             </div>
           </div>
 
           <div className="campos">
             <label className="campo">
-              <span>Tu nombre *</span>
+              <span>{t('Tu nombre', 'Your name')} *</span>
               <input name="nombre" value={f.nombre} onChange={cambiar} autoComplete="name" required />
             </label>
             <label className="campo">
-              <span>Iglesia u organización *</span>
+              <span>{t('Iglesia u organización', 'Church or organization')} *</span>
               <input name="organizacion" value={f.organizacion} onChange={cambiar} autoComplete="organization" required />
             </label>
             <label className="campo">
-              <span>Tipo de evento</span>
+              <span>{t('Tipo de evento', 'Event type')}</span>
               <select name="tipo" value={f.tipo} onChange={cambiar}>
                 {TIPOS_EVENTO.map((t) => <option key={t}>{t}</option>)}
               </select>
             </label>
             <label className="campo">
-              <span>Fecha tentativa</span>
+              <span>{t('Fecha tentativa', 'Tentative date')}</span>
               <input type="date" name="fecha" value={f.fecha} onChange={cambiar} />
             </label>
             <label className="campo campo--ancho">
-              <span>Ciudad y país *</span>
-              <input name="lugar" value={f.lugar} onChange={cambiar} placeholder="Ej. León, Nicaragua" required />
+              <span>{t('Ciudad y país', 'City and country')} *</span>
+              <input name="lugar" value={f.lugar} onChange={cambiar} placeholder={t('Ej. León, Nicaragua', 'e.g. Dallas, Texas')} required />
             </label>
             <label className="campo campo--ancho">
-              <span>Detalles del evento</span>
-              <textarea name="detalles" value={f.detalles} onChange={cambiar} rows={3} placeholder="Tema, asistentes esperados, horario..." />
+              <span>{t('Detalles del evento', 'Event details')}</span>
+              <textarea name="detalles" value={f.detalles} onChange={cambiar} rows={3} placeholder={t('Tema, asistentes esperados, horario...', 'Topic, expected attendance, schedule...')} />
             </label>
           </div>
 
@@ -110,10 +113,10 @@ export default function Invitaciones() {
 
           <div className="invitaciones__acciones">
             <button type="submit" className="boton boton--primario">
-              <Icono nombre="whatsapp" tamano={18} /> Enviar por WhatsApp
+              <Icono nombre="whatsapp" tamano={18} /> {t('Enviar por WhatsApp', 'Send via WhatsApp')}
             </button>
             <button type="button" className="boton boton--secundario" onClick={porCorreo}>
-              <Icono nombre="correo" tamano={18} /> Por correo
+              <Icono nombre="correo" tamano={18} /> {t('Por correo', 'By email')}
             </button>
           </div>
           {datos.nota && <p className="invitaciones__nota">{datos.nota}</p>}

@@ -107,20 +107,40 @@ content:
             label: Sígueme en redes
             type: boolean
             default: true
+          - name: palabra
+            label: Palabra para hoy
+            type: boolean
+            default: true
           - name: biografia
             label: Biografía
+            type: boolean
+            default: true
+          - name: trayectoria
+            label: Trayectoria en números
             type: boolean
             default: true
           - name: mensajes
             label: Mensajes (YouTube)
             type: boolean
             default: true
+          - name: radio
+            label: Faro del Espíritu (radio)
+            type: boolean
+            default: true
           - name: ministerios
             label: Ministerios
             type: boolean
             default: true
+          - name: matrimonios
+            label: Matrimonios (Congreso Enamorados y Defensores del Pacto)
+            type: boolean
+            default: true
           - name: invitaciones
             label: Invitaciones y agenda
+            type: boolean
+            default: true
+          - name: horarios
+            label: Visítanos (horarios y mapa)
             type: boolean
             default: true
           - name: vida_bendecida
@@ -194,6 +214,89 @@ content:
             label: ID de lista o canal de YouTube
             description: Para los últimos videos del canal, el ID empieza con UU (es el del canal cambiando UC por UU).
             type: string
+      - name: palabra
+        label: Palabra para hoy
+        description: Cámbiala cuando quieras; aparece debajo de las redes.
+        type: object
+        fields:
+          - name: titulo
+            label: Etiqueta
+            type: string
+          - name: texto
+            label: Frase o versículo
+            type: text
+          - name: cita
+            label: Cita (ej. Filipenses 1:6)
+            type: string
+          - name: texto_en
+            label: Frase en inglés (opcional, para la versión en inglés)
+            type: text
+          - name: cita_en
+            label: Cita en inglés (ej. Philippians 1:6)
+            type: string
+      - name: trayectoria
+        label: Trayectoria en números
+        type: object
+        list: true
+        fields:
+          - name: numero
+            label: Número
+            type: number
+          - name: prefijo
+            label: Antes del número (ej. +)
+            type: string
+          - name: texto
+            label: Texto
+            type: string
+      - name: radio
+        label: Faro del Espíritu (radio)
+        type: object
+        fields:
+          - name: titulo
+            label: Nombre del programa
+            type: string
+          - name: texto
+            label: Descripción
+            type: text
+          - name: frecuencia
+            label: Frecuencia y horario (opcional, ej. 98.5 FM · lunes a viernes 6 pm)
+            type: string
+          - name: url
+            label: Enlace para escuchar
+            type: string
+          - name: boton
+            label: Texto del botón
+            type: string
+      - name: matrimonios
+        label: Matrimonios
+        type: object
+        fields:
+          - name: titulo
+            label: Título
+            type: string
+          - name: texto
+            label: Introducción
+            type: text
+          - name: ministerios
+            label: Ministerios
+            type: object
+            list: true
+            fields:
+              - name: nombre
+                label: Nombre
+                type: string
+              - name: texto
+                label: Descripción
+                type: text
+              - name: fecha
+                label: Próxima fecha (opcional; se oculta sola cuando pasa)
+                type: date
+              - name: lugar
+                label: Lugar (opcional)
+                type: string
+              - name: boton
+                label: Texto del botón de WhatsApp
+                type: string
 
   - name: ministerios
     label: Ministerios
@@ -254,6 +357,65 @@ content:
       - name: nota
         label: Nota debajo del formulario
         type: string
+
+  - name: iglesia
+    label: Visítanos y transmisión en vivo
+    type: file
+    path: src/content/iglesia.json
+    format: json
+    fields:
+      - name: titulo
+        label: Título
+        type: string
+      - name: texto
+        label: Texto
+        type: text
+      - name: horarios
+        label: Horarios de culto
+        type: object
+        list: true
+        fields:
+          - name: dia
+            label: Día (ej. Domingo)
+            type: string
+          - name: horas
+            label: Horas (ej. 8:00 am)
+            type: string
+            list: true
+          - name: nota
+            label: Nota (ej. Presencial y en vivo)
+            type: string
+      - name: direccion
+        label: Dirección
+        type: string
+      - name: mapa
+        label: Búsqueda para el mapa
+        description: Lo que se buscaría en Google Maps para encontrar la iglesia.
+        type: string
+      - name: en_vivo
+        label: Aviso "En vivo"
+        type: object
+        fields:
+          - name: modo
+            label: Cuándo mostrarlo
+            type: select
+            options:
+              values:
+                - name: automatico
+                  label: Automático (durante los horarios de culto)
+                - name: encendido
+                  label: Siempre (ahora mismo)
+                - name: apagado
+                  label: Nunca
+          - name: texto
+            label: Texto del aviso
+            type: string
+          - name: url
+            label: Enlace de la transmisión
+            type: string
+          - name: duracion_minutos
+            label: Minutos que dura cada culto (para el modo automático)
+            type: number
 
   - name: eventos
     label: Eventos

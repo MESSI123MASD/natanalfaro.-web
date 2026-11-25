@@ -5,6 +5,7 @@ import Footer from './Footer'
 import useRevelar from '../hooks/useRevelar'
 import BarraVistaPrevia from './BarraVistaPrevia'
 import RedesFlotantes from './RedesFlotantes'
+import EnVivo from './EnVivo'
 
 // Al cambiar de ruta: si hay #ancla, baja a esa sección; si no, sube al inicio.
 function DesplazamientoAutomatico() {
@@ -32,6 +33,7 @@ export default function Layout() {
     <>
       <a href="#contenido" className="saltar-contenido">Saltar al contenido</a>
       <DesplazamientoAutomatico />
+      <EnVivo />
       <Header />
       <main id="contenido">
         <Outlet />

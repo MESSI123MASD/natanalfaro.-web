@@ -2,6 +2,7 @@
 // (o desde el panel de edición). Aquí solo se preparan para los componentes.
 import { leer } from '../lib/contenido'
 import { iconoPorNombre } from '../lib/iconos'
+import { t } from '../lib/idioma'
 
 const datos = leer('sitio')
 
@@ -32,11 +33,11 @@ export const redesDestacadas = redes.filter((r) => r.destacada)
 
 // Enlaces del menú (los maneja desarrollo). Los que empiezan con "/#" llevan a una sección del inicio.
 export const navegacion = [
-  { texto: 'Inicio', ruta: '/' },
-  { texto: 'Biografía', ruta: '/#biografia' },
-  { texto: 'Mensajes', ruta: '/#mensajes' },
-  { texto: 'Ministerios', ruta: '/#ministerios' },
-  { texto: 'Invitaciones', ruta: '/#invitaciones' },
+  { texto: t('Biografía', 'About'), ruta: '/#biografia' },
+  { texto: t('Mensajes', 'Messages'), ruta: '/#mensajes' },
+  { texto: t('Ministerios', 'Ministries'), ruta: '/#ministerios' },
+  { texto: t('Invitaciones', 'Invitations'), ruta: '/#invitaciones' },
+  { texto: t('Visítanos', 'Visit us'), ruta: '/#visitanos' },
   { texto: 'Vida Bendecida', ruta: '/#vida-bendecida' },
-  { texto: 'Ofrenda y Diezmo', ruta: '/ofrenda' },
+  { texto: t('Ofrenda', 'Give'), ruta: '/ofrenda' },
 ]

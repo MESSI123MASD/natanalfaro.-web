@@ -11,10 +11,15 @@
   "animaciones": true,
   "secciones": {
     "redes": true,
+    "palabra": true,
     "biografia": true,
+    "trayectoria": true,
     "mensajes": true,
+    "radio": true,
     "ministerios": true,
+    "matrimonios": true,
     "invitaciones": true,
+    "horarios": true,
     "vida_bendecida": true,
     "eventos": true,
     "testimonios": true

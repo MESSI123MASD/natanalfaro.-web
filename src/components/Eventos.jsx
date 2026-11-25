@@ -1,7 +1,8 @@
 import { eventos } from '../data/contenido'
+import { t } from '../lib/idioma'
 import './Eventos.css'
 
-const formatoFecha = new Intl.DateTimeFormat('es-NI', { day: 'numeric', month: 'long', year: 'numeric' })
+const formatoFecha = new Intl.DateTimeFormat(t('es-NI', 'en-US'), { day: 'numeric', month: 'long', year: 'numeric' })
 
 export default function Eventos() {
   // Solo eventos de hoy en adelante, ordenados por fecha
@@ -14,8 +15,8 @@ export default function Eventos() {
     <section id="eventos" className="seccion">
       <div className="contenedor">
         <div className="seccion__encabezado revelar">
-          <span className="seccion__etiqueta">Agenda</span>
-          <h2>Próximos eventos</h2>
+          <span className="seccion__etiqueta">{t('Agenda', 'Schedule')}</span>
+          <h2>{t('Próximos eventos', 'Upcoming events')}</h2>
         </div>
 
         <ul className="eventos">
@@ -28,7 +29,7 @@ export default function Eventos() {
                 <h3>{e.titulo}</h3>
                 {e.lugar && <p className="evento__lugar">{e.lugar}</p>}
                 {e.descripcion && <p>{e.descripcion}</p>}
-                {e.enlace && <a href={e.enlace}>Más información →</a>}
+                {e.enlace && <a href={e.enlace}>{t('Más información', 'More information')} →</a>}
               </div>
             </li>
           ))}

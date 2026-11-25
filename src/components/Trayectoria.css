@@ -1,0 +1,40 @@
+.trayectoria { padding: 0 0 110px; }
+
+.trayectoria__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--borde);
+  border-bottom: 1px solid var(--borde);
+}
+
+.cifra {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 36px 24px;
+  text-align: center;
+}
+.cifra + .cifra { border-left: 1px solid var(--borde); }
+
+.cifra__numero {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--acento);
+  font-variant-numeric: tabular-nums;
+}
+.cifra__texto { color: var(--texto-suave); font-size: 0.98rem; line-height: 1.4; }
+
+@media (max-width: 860px) {
+  .trayectoria__lista { grid-template-columns: 1fr 1fr; }
+  .cifra:nth-child(3) { border-left: 0; }
+  .cifra:nth-child(n + 3) { border-top: 1px solid var(--borde); }
+}
+@media (max-width: 400px) {
+  .cifra { padding: 28px 12px; }
+}

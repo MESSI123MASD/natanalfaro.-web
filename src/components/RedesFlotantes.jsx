@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { redesDestacadas } from '../data/site'
 import Icono from './Icono'
+import { t } from '../lib/idioma'
 import './RedesFlotantes.css'
 
 // Botón flotante: al tocarlo muestra las redes principales. Aparece al bajar de la portada.
@@ -48,11 +49,11 @@ export default function RedesFlotantes() {
         className="flotante__boton"
         aria-expanded={abierto}
         aria-controls="redes-rapidas"
-        aria-label={abierto ? 'Cerrar redes' : 'Abrir redes sociales'}
+        aria-label={abierto ? t('Cerrar redes', 'Close social media') : t('Abrir redes sociales', 'Open social media')}
         onClick={() => setAbierto(!abierto)}
       >
         <span className="flotante__mas" aria-hidden="true" />
-        <span className="flotante__etiqueta">Redes</span>
+        <span className="flotante__etiqueta">{t('Redes', 'Social')}</span>
       </button>
     </div>
   )

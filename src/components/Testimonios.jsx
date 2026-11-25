@@ -1,4 +1,5 @@
 import { testimonios } from '../data/contenido'
+import { t } from '../lib/idioma'
 import './Testimonios.css'
 
 export default function Testimonios() {
@@ -8,8 +9,8 @@ export default function Testimonios() {
     <section id="testimonios" className="seccion seccion--alt">
       <div className="contenedor">
         <div className="seccion__encabezado revelar">
-          <span className="seccion__etiqueta">Testimonios</span>
-          <h2>Vidas transformadas</h2>
+          <span className="seccion__etiqueta">{t('Testimonios', 'Testimonies')}</span>
+          <h2>{t('Vidas transformadas', 'Changed lives')}</h2>
         </div>
 
         <div className="testimonios">

@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { navegacion, sitio } from '../data/site'
 import BotonModo from './BotonModo'
+import BotonIdioma from './BotonIdioma'
+import { t } from '../lib/idioma'
 import './Header.css'
 
 export default function Header() {
@@ -53,12 +55,13 @@ export default function Header() {
         </Link>
 
         <div className="header__herramientas">
+          <BotonIdioma />
           <BotonModo />
         <button
           className="header__toggle"
           aria-expanded={abierto}
           aria-controls="menu-principal"
-          aria-label={abierto ? 'Cerrar menú' : 'Abrir menú'}
+          aria-label={abierto ? t('Cerrar menú', 'Close menu') : t('Abrir menú', 'Open menu')}
           onClick={() => setAbierto(!abierto)}
         >
           <span />

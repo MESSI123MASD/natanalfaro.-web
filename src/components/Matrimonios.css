@@ -1,0 +1,58 @@
+.matrimonios__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.pareja {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 36px;
+  border-radius: calc(var(--radio) + 4px);
+  border: 1px solid var(--borde);
+  background: linear-gradient(180deg, var(--capa-1), var(--capa-2));
+  transition:
+    opacity 0.9s var(--curva),
+    transform 0.6s var(--curva),
+    border-color 0.4s;
+  transition-delay: var(--retraso, 0ms), 0ms, 0ms;
+}
+.pareja:hover { border-color: var(--acento); }
+.pareja p { color: var(--texto-suave); }
+.pareja .boton { margin-top: auto; }
+
+/* Dos anillos entrelazados que giran suave */
+.pareja__anillos { position: relative; display: block; width: 64px; height: 40px; margin-bottom: 24px; }
+.pareja__anillos span {
+  position: absolute;
+  top: 2px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--acento);
+  animation: latido 4s ease-in-out infinite;
+}
+.pareja__anillos span:first-child { left: 0; }
+.pareja__anillos span:last-child { left: 22px; animation-delay: -2s; opacity: 0.75; }
+@keyframes latido {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+.sin-animaciones .pareja__anillos span { animation: none; }
+
+.pareja__fecha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--acento) !important;
+}
+
+@media (max-width: 760px) {
+  .matrimonios__grid { grid-template-columns: 1fr; }
+  .pareja { padding: 30px 22px; }
+  .pareja .boton { width: 100%; }
+}

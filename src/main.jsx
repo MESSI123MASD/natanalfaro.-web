@@ -5,6 +5,7 @@ import './styles/global.css'
 import { leer } from './lib/contenido'
 import { aplicarTema } from './lib/tema'
 import { vistaPreviaActiva, cargarBorrador } from './lib/vistaPrevia'
+import { idioma } from './lib/idioma'
 
 async function iniciar() {
   // Vista previa: antes de dibujar, trae el contenido de la rama "borrador" de GitHub
@@ -20,6 +21,7 @@ async function iniciar() {
     document.head.appendChild(robots)
   }
 
+  document.documentElement.lang = idioma
   aplicarTema(leer('tema'))
 
   // App se importa después, para que todos los datos ya lean el contenido correcto

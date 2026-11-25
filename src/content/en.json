@@ -1,0 +1,160 @@
+{
+  "_nota": "Traducción al inglés. Solo se escribe lo que cambia; lo que falte se muestra en español. Las listas van en el mismo orden que en español.",
+  "sitio": {
+    "lema": "Today is the first day of the rest of your blessed life",
+    "descripcion": "Founder and Senior Pastor of Casa de Mi Gloria. Church planter, missional leader and international speaker.",
+    "contacto": {
+      "direccion": "200 m west of Rotonda Universitaria, Managua, Nicaragua"
+    },
+    "redes": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {
+        "usuario": "Podcast"
+      }
+    ]
+  },
+  "inicio": {
+    "portada": {
+      "etiqueta": "Pastor · Casa de Mi Gloria",
+      "frase": "Today is the first day of the rest of your blessed life",
+      "texto": "Founder and Senior Pastor of Casa de Mi Gloria. Church planter, missional leader and international speaker, equipping leaders and advancing the Kingdom of God in Nicaragua."
+    },
+    "biografia": {
+      "titulo": "I am Natán Alfaro",
+      "parrafos": [
+        "Since 2010, together with my wife Cristina, I have been the founder and Senior Pastor of Casa de Mi Gloria in Managua. I am a church planter, missional leader and international speaker, and my passion is equipping leaders to advance the Kingdom of God.",
+        "I graduated in Theology from Southwestern Assemblies of God University (SAGU) in Texas in 1994. I lead the radio program Faro del Espíritu and the El Faro Training Center.",
+        "With Cristina we founded the marriage ministry Defensores del Pacto and the Enamorados Congress, and we lead the Acahualinca Children's Center and the Managua Ministry Training Center."
+      ]
+    },
+    "mision": "Passionate about fulfilling God's dream for Nicaragua, we have planted churches and developed projects, ministries and programs so that every person can know Jesus Christ, find salvation in Him, have their life transformed and reach the purpose for which they were designed.",
+    "mensaje": {
+      "titulo": "Messages",
+      "texto": "Sermons, series and reflections for your week. New messages every week on YouTube (in Spanish)."
+    },
+    "trayectoria": [
+      {
+        "texto": "years in ministry"
+      },
+      {
+        "texto": "years pastoring Casa de Mi Gloria"
+      },
+      {
+        "texto": "children served every week in Acahualinca"
+      },
+      {
+        "texto": "ministries and projects"
+      }
+    ],
+    "radio": {
+      "texto": "A Bible-based radio program with topics to nourish your spiritual life, led by Pastor Natán Alfaro (in Spanish).",
+      "boton": "Listen to Faro del Espíritu"
+    },
+    "matrimonios": {
+      "titulo": "Unbreakable marriages",
+      "texto": "Natán and Cristina Alfaro believe a marriage with God at the center can weather any storm. That is why they founded two ministries to strengthen couples.",
+      "ministerios": [
+        {
+          "nombre": "Enamorados Congress",
+          "texto": "Annual congress to build unbreakable marriages on the biblical model, with God at the center.",
+          "boton": "Get congress information"
+        },
+        {
+          "nombre": "Defensores del Pacto",
+          "texto": "Marriage ministry that walks with couples as they protect the covenant they made before God.",
+          "boton": "I want to join"
+        }
+      ]
+    }
+  },
+  "ministerios": [
+    {
+      "descripcion": "A Christ-centered church: we focus on a relationship with God, not a religion. Our mission is to be Jesus' instrument to impact every life and reach every soul in this nation."
+    },
+    {
+      "descripcion": "Bible-based radio program with a wide range of topics to nourish your spiritual life."
+    },
+    {
+      "nombre": "El Faro Training Center",
+      "descripcion": "Venue for Christian events with a 250-seat auditorium, air-conditioned rooms and apartments with laundry service, in central Managua."
+    },
+    {
+      "nombre": "Managua Ministry Training Center",
+      "descripcion": "Center affiliated with Global University offering theological training to strengthen your service in God's work."
+    },
+    {
+      "nombre": "Acahualinca Children's Center",
+      "descripcion": "Provides education, food and spiritual care to the children of Acahualinca, one of the poorest communities in Nicaragua. 200 children are served every week, and you can be part of it."
+    },
+    {
+      "nombre": "Enamorados Congress",
+      "descripcion": "Annual congress to build unbreakable marriages and strengthen couples on the biblical model, with God at the center."
+    }
+  ],
+  "invitaciones": {
+    "titulo": "Invite Pastor Natán",
+    "texto": "If you would like Pastor Natán Alfaro to minister at your church, conference or event, send us your invitation. Our team will check his schedule and reply as soon as possible.",
+    "tipos": [
+      {
+        "nombre": "Conferences and congresses",
+        "texto": "Leadership, marriage, family and missional vision."
+      },
+      {
+        "nombre": "Services and special events",
+        "texto": "Preaching in churches in Nicaragua and abroad."
+      },
+      {
+        "nombre": "Leadership training",
+        "texto": "Workshops and retreats for pastors and ministry teams."
+      },
+      {
+        "nombre": "Media and interviews",
+        "texto": "Radio, TV, podcasts and live streams."
+      }
+    ],
+    "nota": "We recommend writing at least 2 months in advance."
+  },
+  "iglesia": {
+    "titulo": "Visit us at Casa de Mi Gloria",
+    "texto": "We look forward to seeing you every Sunday. Bring your family: there is always a place for you here.",
+    "horarios": [
+      {
+        "dia": "Sunday",
+        "nota": "In person and live online (in Spanish)"
+      }
+    ],
+    "direccion": "200 m west of Rotonda Universitaria, Managua, Nicaragua",
+    "en_vivo": {
+      "texto": "Pastor Natán is live now"
+    }
+  },
+  "vida-bendecida": {
+    "intro": "Receive daily reflections and advice in the light of God's Word from Pastor Natán Alfaro, right on your phone (in Spanish).",
+    "canales": [
+      {
+        "texto": "Send \"Vida Bendecida\" to +505 8881 8881. Your number will only be used for messages from the pastor.",
+        "boton": "Subscribe on WhatsApp"
+      },
+      {
+        "texto": "Join the channel and get every reflection as soon as it is published.",
+        "boton": "Join on Telegram"
+      },
+      {
+        "texto": "Messages, series and yearly reading plans.",
+        "boton": "Subscribe on YouTube"
+      }
+    ]
+  },
+  "ofrenda": {
+    "titulo": "Tithes and Offerings",
+    "intro": "Thank you for sowing into God's work. Your offering supports the ministries, the Acahualinca Children's Center and the training of new leaders in Nicaragua.",
+    "versiculo": {
+      "texto": "God loves a cheerful giver.",
+      "cita": "2 Corinthians 9:7"
+    }
+  }
+}
