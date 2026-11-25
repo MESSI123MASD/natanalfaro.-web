@@ -76,5 +76,25 @@
         "boton": "Quiero ser parte"
       }
     ]
+  },
+  "galeria": {
+    "titulo": "Momentos de ministerio",
+    "fotos": [
+      {
+        "imagen": "/img/galeria-escenario.jpg",
+        "texto": "Predicando con pasión el mensaje de Cristo",
+        "posicion": "center 30%"
+      },
+      {
+        "imagen": "/img/galeria-predicando.jpg",
+        "texto": "Orando por cada persona que llega a Casa de Mi Gloria",
+        "posicion": "center 35%"
+      },
+      {
+        "imagen": "/img/galeria-caballeros.jpg",
+        "texto": "Ministerio de Caballeros: hombres comprometidos con Dios y su familia",
+        "posicion": "center 25%"
+      }
+    ]
   }
 }

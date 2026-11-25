@@ -1,0 +1,185 @@
+.carrusel-seccion { padding: 0 0 110px; }
+
+.carrusel {
+  position: relative;
+  aspect-ratio: 16 / 8;
+  max-height: 640px;
+  width: 100%;
+  border-radius: calc(var(--radio) + 10px);
+  overflow: hidden;
+  background: #0d0c0a;
+  isolation: isolate;
+  box-shadow: 0 40px 90px -50px rgba(0, 0, 0, 0.7);
+  outline-offset: 4px;
+}
+
+/* Cada foto: aparece con un fundido y un zoom lento tipo cine */
+.carrusel__foto {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 1.1s var(--curva), visibility 0s 1.1s;
+  visibility: hidden;
+}
+.carrusel__foto.is-activa { opacity: 1; visibility: visible; transition: opacity 1.1s var(--curva); z-index: 1; }
+
+.carrusel__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.12);
+  transition: transform 1.2s var(--curva);
+}
+.carrusel__foto.is-activa img { transform: scale(1.02); animation: cine calc(var(--duracion) + 1500ms) linear forwards; }
+@keyframes cine {
+  from { transform: scale(1.02) translate(0, 0); }
+  to { transform: scale(1.12) translate(-1.5%, -1%); }
+}
+
+/* Degradado para que el texto se lea sobre cualquier foto */
+.carrusel__foto::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, rgba(8, 7, 5, 0.85) 0%, rgba(8, 7, 5, 0.25) 42%, transparent 65%),
+    linear-gradient(180deg, rgba(8, 7, 5, 0.45) 0%, transparent 22%);
+}
+
+.carrusel__foto figcaption {
+  position: absolute;
+  left: 44px;
+  right: 140px;
+  bottom: 58px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #f4ebdc;
+}
+.carrusel__numero {
+  font-family: var(--fuente-detalles);
+  font-size: 0.8rem;
+  letter-spacing: 0.24em;
+  color: var(--acento-portada, #d1ad66);
+}
+.carrusel__texto {
+  max-width: 640px;
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.4rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: var(--espaciado-titulos);
+}
+
+/* El texto entra deslizándose cada vez que cambia la foto */
+.carrusel__numero,
+.carrusel__texto { opacity: 0; transform: translateY(24px); }
+.carrusel__foto.is-activa .carrusel__numero,
+.carrusel__foto.is-activa .carrusel__texto {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.9s var(--curva) 0.35s, transform 0.9s var(--curva) 0.35s;
+}
+.carrusel__foto.is-activa .carrusel__texto { transition-delay: 0.5s; }
+
+.carrusel__etiqueta {
+  position: absolute;
+  top: 26px;
+  left: 44px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--fuente-detalles);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--acento-portada, #d1ad66);
+}
+.carrusel__etiqueta::before { content: ''; width: 24px; height: 1px; background: currentColor; }
+
+/* Flechas de vidrio */
+.carrusel__flecha {
+  position: absolute;
+  bottom: 48px;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  border: 1px solid rgba(244, 235, 220, 0.3);
+  background: rgba(13, 12, 10, 0.35);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #f4ebdc;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s var(--curva);
+}
+.carrusel__flecha:hover { background: var(--acento-portada, #d1ad66); border-color: transparent; color: #0d0c0a; }
+.carrusel__flecha:active { transform: scale(0.92); }
+.carrusel__flecha--atras { right: 102px; }
+.carrusel__flecha--atras svg { transform: rotate(180deg); }
+.carrusel__flecha--adelante { right: 40px; }
+
+/* Barras de progreso (estilo historias) */
+.carrusel__barras {
+  position: absolute;
+  left: 44px;
+  right: 44px;
+  bottom: 22px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+.carrusel__barra {
+  flex: 1;
+  height: 16px;
+  padding: 6px 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.carrusel__barra span {
+  display: block;
+  height: 3px;
+  border-radius: 3px;
+  background: rgba(244, 235, 220, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+.carrusel__barra span::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--acento-portada, #d1ad66);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.carrusel__barra.is-vista span::after { transform: scaleX(1); }
+.carrusel__barra.is-activa span::after { transform: scaleX(1); }
+.carrusel.is-corriendo .carrusel__barra.is-activa span::after {
+  transform: scaleX(0);
+  animation: llenar var(--duracion) linear forwards;
+}
+@keyframes llenar { to { transform: scaleX(1); } }
+
+.sin-animaciones .carrusel__foto.is-activa img { animation: none; }
+
+@media (max-width: 760px) {
+  .carrusel-seccion { padding-bottom: 80px; }
+  .carrusel-seccion .contenedor { padding: 0 12px; }
+  .carrusel { aspect-ratio: 4 / 5; max-height: 560px; border-radius: 22px; }
+  .carrusel__foto figcaption { left: 22px; right: 22px; bottom: 92px; }
+  .carrusel__etiqueta { left: 22px; top: 20px; }
+  .carrusel__barras { left: 22px; right: 22px; bottom: 16px; }
+  .carrusel__flecha { bottom: 40px; width: 44px; height: 44px; }
+  .carrusel__flecha--atras { left: 22px; right: auto; }
+  .carrusel__flecha--adelante { left: 74px; right: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carrusel__foto.is-activa img { animation: none; transform: none; }
+}

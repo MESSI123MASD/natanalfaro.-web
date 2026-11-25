@@ -69,6 +69,20 @@
           "boton": "I want to join"
         }
       ]
+    },
+    "galeria": {
+      "titulo": "Moments of ministry",
+      "fotos": [
+        {
+          "texto": "Preaching the message of Christ with passion"
+        },
+        {
+          "texto": "Praying for every person who comes to Casa de Mi Gloria"
+        },
+        {
+          "texto": "Men's Ministry: men committed to God and their families"
+        }
+      ]
     }
   },
   "ministerios": [

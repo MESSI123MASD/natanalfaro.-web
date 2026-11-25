@@ -1,6 +1,7 @@
 import Hero from '../components/Hero'
 import Redes from '../components/Redes'
 import Palabra from '../components/Palabra'
+import Carrusel from '../components/Carrusel'
 import Accesos from '../components/Accesos'
 import Mensajes from '../components/Mensajes'
 import HorariosCorto from '../components/HorariosCorto'
@@ -19,6 +20,7 @@ export default function Inicio() {
       <Hero />
       {secciones.redes && <Redes />}
       {secciones.palabra && <Palabra />}
+      {secciones.galeria && <Carrusel />}
       <Accesos />
       {secciones.mensajes && <Mensajes />}
       {secciones.eventos && <Eventos />}

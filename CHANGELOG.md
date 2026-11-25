@@ -10,6 +10,20 @@ Mientras el sitio esté en construcción usamos `0.x`. Al publicarlo en natanalf
 
 ## [Sin publicar]
 
+## [1.1.0] - 2026-11-25
+
+### Agregado
+- Carrusel de fotos en el inicio ("Momentos de ministerio"): fundido con zoom lento tipo cine, texto que entra
+  deslizándose, barras de progreso estilo historias, flechas, deslizar con el dedo y teclado.
+  Avanza solo cada 6 segundos; se pausa al pasar el mouse o cuando no está en pantalla.
+- Panel: fotos y textos del carrusel editables, con opción para ocultarlo.
+
+## [1.0.3] - 2026-11-25
+
+### Cambiado
+- Modo claro: la portada también pasa a beige pared (antes se quedaba negra), con el menú en colores oscuros.
+- Botones dorados en modo claro con texto claro para que se lean mejor.
+
 ## [1.0.2] - 2026-11-25
 
 ### Cambiado

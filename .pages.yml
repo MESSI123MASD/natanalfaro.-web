@@ -118,6 +118,10 @@ content:
             label: Palabra para hoy
             type: boolean
             default: true
+          - name: galeria
+            label: Carrusel de fotos
+            type: boolean
+            default: true
           - name: biografia
             label: Biografía
             type: boolean
@@ -241,6 +245,28 @@ content:
           - name: cita_en
             label: Cita en inglés (ej. Philippians 1:6)
             type: string
+      - name: galeria
+        label: Carrusel de fotos
+        type: object
+        fields:
+          - name: titulo
+            label: Título
+            type: string
+          - name: fotos
+            label: Fotos
+            description: Horizontales, idealmente 1600 px de ancho. Se pasan solas cada 6 segundos.
+            type: object
+            list: true
+            fields:
+              - name: imagen
+                label: Foto
+                type: image
+              - name: texto
+                label: Texto sobre la foto
+                type: string
+              - name: posicion
+                label: Enfoque en celular (opcional, ej. center 30%)
+                type: string
       - name: trayectoria
         label: Trayectoria en números
         type: object

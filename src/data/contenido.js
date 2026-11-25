@@ -10,6 +10,7 @@ export const biografia = inicio.biografia
 export const mision = inicio.mision
 export const mensaje = inicio.mensaje || {}
 export const palabra = inicio.palabra || {}
+export const galeria = { ...(inicio.galeria || {}), fotos: (inicio.galeria?.fotos || []).filter((f) => f.imagen) }
 export const trayectoria = (inicio.trayectoria || []).filter((d) => d.numero !== '' && d.numero !== undefined && d.texto)
 export const radio = inicio.radio || {}
 export const matrimonios = { ...(inicio.matrimonios || {}), ministerios: (inicio.matrimonios?.ministerios || []).filter((m) => m.nombre) }
@@ -19,6 +20,7 @@ export const iglesia = leer('iglesia') || {}
 export const secciones = {
   redes: true,
   palabra: true,
+  galeria: true,
   trayectoria: true,
   radio: true,
   matrimonios: true,

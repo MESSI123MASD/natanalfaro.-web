@@ -13,6 +13,7 @@
   "secciones": {
     "redes": true,
     "palabra": true,
+    "galeria": true,
     "biografia": true,
     "trayectoria": true,
     "mensajes": true,

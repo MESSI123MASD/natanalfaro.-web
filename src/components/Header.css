@@ -202,3 +202,10 @@
 @media (max-width: 860px) {
   .header__herramientas { margin-left: auto; }
 }
+
+/* Modo claro: el menú usa siempre los colores del tema (la portada ya no es oscura) */
+:root[data-modo='claro'] .header {
+  --titulo: var(--tema-titulo);
+  --texto: var(--tema-texto);
+  --texto-suave: var(--tema-texto-suave);
+}

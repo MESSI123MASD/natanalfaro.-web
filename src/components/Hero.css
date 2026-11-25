@@ -221,3 +221,28 @@
 @media (prefers-reduced-motion: reduce) {
   .hero__entrada { opacity: 1; transform: none; }
 }
+
+/* ---------- Modo claro (sol): la portada también pasa a beige pared ---------- */
+:root[data-modo='claro'] .hero {
+  --titulo: var(--tema-titulo);
+  --texto: var(--tema-texto);
+  --texto-suave: var(--tema-texto-suave);
+  --borde-fuerte: rgba(60, 45, 25, 0.16);
+  --capa-1: rgba(255, 252, 245, 0.55);
+  --acento: var(--acento-legible, #8a6a2c);
+  background: transparent;
+}
+:root[data-modo='claro'] .hero__rejilla {
+  background-image:
+    linear-gradient(rgba(60, 45, 25, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(60, 45, 25, 0.05) 1px, transparent 1px);
+}
+:root[data-modo='claro'] .hero__frase {
+  color: var(--acento);
+  -webkit-text-fill-color: var(--acento);
+}
+:root[data-modo='claro'] .hero__red:hover { color: var(--titulo); background: rgba(255, 252, 245, 0.9); }
+:root[data-modo='claro'] .hero__marco {
+  background: linear-gradient(160deg, rgba(255, 252, 245, 0.9), rgba(255, 252, 245, 0.3));
+  box-shadow: 0 40px 80px -40px rgba(60, 45, 25, 0.35);
+}
