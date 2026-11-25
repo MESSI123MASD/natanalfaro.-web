@@ -31,13 +31,13 @@ export const redes = (datos.redes || [])
 
 export const redesDestacadas = redes.filter((r) => r.destacada)
 
-// Enlaces del menú (los maneja desarrollo). Los que empiezan con "/#" llevan a una sección del inicio.
+// Enlaces del menú (los maneja desarrollo): cada uno es una página.
 export const navegacion = [
-  { texto: t('Biografía', 'About'), ruta: '/#biografia' },
-  { texto: t('Mensajes', 'Messages'), ruta: '/#mensajes' },
-  { texto: t('Ministerios', 'Ministries'), ruta: '/#ministerios' },
-  { texto: t('Invitaciones', 'Invitations'), ruta: '/#invitaciones' },
-  { texto: t('Visítanos', 'Visit us'), ruta: '/#visitanos' },
-  { texto: 'Vida Bendecida', ruta: '/#vida-bendecida' },
+  { texto: t('Biografía', 'About'), ruta: '/biografia' },
+  { texto: t('Mensajes', 'Messages'), ruta: '/mensajes' },
+  { texto: t('Ministerios', 'Ministries'), ruta: '/ministerios' },
+  { texto: t('Invitaciones', 'Invitations'), ruta: '/invitaciones' },
+  { texto: t('Visítanos', 'Visit us'), ruta: '/visitanos' },
+  { texto: 'Vida Bendecida', ruta: '/vida-bendecida' },
   { texto: t('Ofrenda', 'Give'), ruta: '/ofrenda' },
 ]

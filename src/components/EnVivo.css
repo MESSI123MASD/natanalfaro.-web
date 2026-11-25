@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   background: var(--acento-portada, #d9b25f);
-  color: #0a0a0a;
+  color: #0d0c0a;
   animation: bajar-aviso 0.6s var(--curva);
 }
 @keyframes bajar-aviso { from { transform: translateY(-100%); } }
@@ -29,7 +29,7 @@
   text-decoration: none;
   font-size: 0.95rem;
 }
-.en-vivo__enlace strong { font-family: var(--fuente-titulos); font-size: 0.8rem; letter-spacing: 0.14em; }
+.en-vivo__enlace strong { font-family: var(--fuente-detalles); font-size: 0.8rem; letter-spacing: 0.14em; }
 .en-vivo__texto { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .en-vivo__accion { font-weight: 700; white-space: nowrap; }
 .en-vivo__enlace:hover .en-vivo__accion { text-decoration: underline; }

@@ -10,6 +10,17 @@ Mientras el sitio esté en construcción usamos `0.x`. Al publicarlo en natanalf
 
 ## [Sin publicar]
 
+## [1.0.0] - 2026-11-25
+
+### Cambiado
+- El sitio deja de ser una sola página: Inicio corto + páginas propias para Biografía, Mensajes, Ministerios,
+  Invitaciones, Visítanos y Vida Bendecida (enlaces directos para compartir, ej. natanalfaro.org/invitaciones).
+- Inicio: portada, redes, palabra para hoy, tarjetas de acceso a cada página, último mensaje y horarios.
+- Paleta oficial "Clásica": negro, dorado, beige y gris. El modo claro ahora es beige con títulos negros.
+- Tipografía de la marca: Trajan Pro (títulos), Avenir (textos) e ITC Eras (etiquetas, menú y botones).
+  Si la fuente original no está disponible se usan alternativas libres parecidas: Cinzel, Nunito Sans y Didact Gothic.
+- Pie de página con enlaces a todas las páginas. sitemap.xml actualizado.
+
 ## [0.9.0] - 2026-11-25
 
 ### Agregado

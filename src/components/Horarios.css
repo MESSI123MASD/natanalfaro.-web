@@ -24,7 +24,7 @@
   padding: 8px 14px;
   border-radius: 999px;
   border: 1px solid var(--borde-fuerte);
-  font-family: var(--fuente-titulos);
+  font-family: var(--fuente-detalles);
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--acento);

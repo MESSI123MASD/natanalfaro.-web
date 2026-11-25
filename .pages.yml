@@ -33,8 +33,10 @@ content:
         type: select
         options:
           values:
+            - name: clasica
+              label: Clásica (negro, dorado, beige y gris)
             - name: dorado
-              label: Dorado (actual)
+              label: Dorado
             - name: champana
               label: Champaña
             - name: bronce
@@ -65,12 +67,17 @@ content:
         label: Tipo de letra de títulos
         type: select
         options:
-          values: [Montserrat, Poppins, Raleway, DM Sans, Inter, Playfair Display, Cormorant Garamond, Lora, Merriweather]
+          values: [Trajan Pro, Montserrat, Poppins, Raleway, DM Sans, Inter, Playfair Display, Cormorant Garamond, Lora, Merriweather]
       - name: fuente_texto
         label: Tipo de letra de párrafos
         type: select
         options:
-          values: [Source Sans 3, Inter, DM Sans, Poppins, Raleway, Montserrat, Lora, Merriweather]
+          values: [Avenir, Source Sans 3, Inter, DM Sans, Poppins, Raleway, Montserrat, Lora, Merriweather]
+      - name: fuente_detalles
+        label: Tipo de letra de detalles (etiquetas pequeñas y botones)
+        type: select
+        options:
+          values: [ITC Eras, Avenir, Montserrat, Inter, DM Sans, Poppins]
       - name: tamano_texto
         label: Tamaño de letra
         type: select

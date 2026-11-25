@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { portada } from '../data/contenido'
 import { redesDestacadas } from '../data/site'
 import Icono from './Icono'
@@ -47,10 +48,10 @@ export default function Hero() {
           )}
 
           <div className="hero__acciones hero__entrada" style={{ '--retraso': '500ms' }}>
-            <a href="#vida-bendecida" className="boton boton--primario">{t('Recibe Vida Bendecida', 'Get Vida Bendecida')}</a>
-            <a href="#invitaciones" className="boton boton--secundario">
+            <Link to="/vida-bendecida" className="boton boton--primario">{t('Recibe Vida Bendecida', 'Get Vida Bendecida')}</Link>
+            <Link to="/invitaciones" className="boton boton--secundario">
               <Icono nombre="calendario" tamano={18} /> {t('Invitaciones y agenda', 'Invitations')}
-            </a>
+            </Link>
           </div>
         </div>
 

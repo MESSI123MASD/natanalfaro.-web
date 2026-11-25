@@ -33,11 +33,12 @@
 .biografia__texto { color: var(--texto-suave); }
 
 .mision {
+  font-style: italic;
   position: relative;
   margin: 120px auto 0;
   max-width: 900px;
   padding: 0;
-  font-family: var(--fuente-titulos);
+  font-family: var(--fuente-texto);
   font-size: clamp(1.25rem, 2.6vw, 1.75rem);
   font-weight: 500;
   line-height: 1.5;

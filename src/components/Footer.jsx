@@ -1,4 +1,5 @@
-import { contacto, redes, sitio } from '../data/site'
+import { Link } from 'react-router-dom'
+import { contacto, navegacion, redes, sitio } from '../data/site'
 import { t } from '../lib/idioma'
 import './Footer.css'
 
@@ -11,6 +12,15 @@ export default function Footer() {
         <div>
           <p className="footer__nombre">{sitio.nombre}</p>
           <p className="footer__lema">{sitio.lema}</p>
+        </div>
+
+        <div>
+          <h3 className="footer__titulo">{t('Páginas', 'Pages')}</h3>
+          <ul className="footer__redes">
+            {navegacion.map((n) => (
+              <li key={n.ruta}><Link to={n.ruta}>{n.texto}</Link></li>
+            ))}
+          </ul>
         </div>
 
         <div>

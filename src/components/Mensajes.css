@@ -32,7 +32,7 @@
   font: inherit;
   background:
     radial-gradient(circle at 50% 45%, var(--acento-glow), transparent 60%),
-    linear-gradient(160deg, #1a1a1a, #070707);
+    linear-gradient(160deg, #1c1a16, #0b0a08);
 }
 
 .mensajes__play {
@@ -50,7 +50,7 @@
 }
 .mensajes__portada:hover .mensajes__play { transform: scale(1.08); }
 
-.mensajes__leyenda { font-family: var(--fuente-titulos); font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); }
+.mensajes__leyenda { font-family: var(--fuente-detalles); font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); }
 
 @keyframes pulso {
   0% { box-shadow: 0 0 0 0 rgba(217, 178, 95, 0.45); }

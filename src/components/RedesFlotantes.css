@@ -27,7 +27,7 @@ body:has(.vista-previa) .flotante { bottom: 104px; }
   border-radius: 999px;
   background: var(--acento);
   color: var(--acento-texto);
-  font-family: var(--fuente-titulos);
+  font-family: var(--fuente-detalles);
   font-weight: 600;
   font-size: 0.92rem;
   cursor: pointer;
@@ -75,7 +75,7 @@ body:has(.vista-previa) .flotante { bottom: 104px; }
   border: 1px solid var(--borde-fuerte);
   color: var(--titulo);
   text-decoration: none;
-  font-family: var(--fuente-titulos);
+  font-family: var(--fuente-detalles);
   font-size: 0.9rem;
   font-weight: 500;
   box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.6);

@@ -5,9 +5,9 @@
   right: 0;
   z-index: 50;
   /* Transparente sobre la portada: textos claros */
-  --titulo: #ffffff;
-  --texto: #ededed;
-  --texto-suave: rgba(255, 255, 255, 0.72);
+  --titulo: #f4ebdc;
+  --texto: #e4dccd;
+  --texto-suave: rgba(244, 235, 220, 0.72);
   color: var(--titulo);
   border-bottom: 1px solid transparent;
   transition: background 0.4s, border-color 0.4s, backdrop-filter 0.4s;
@@ -51,7 +51,7 @@
   font-weight: 700;
   font-size: 1.05rem;
   line-height: 1.1;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.02em;
 }
 
 .header__marca small {
@@ -64,7 +64,7 @@
 
 .header__nav ul {
   display: flex;
-  gap: 36px;
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -74,8 +74,8 @@
   position: relative;
   color: var(--texto-suave);
   text-decoration: none;
-  font-family: var(--fuente-titulos);
-  font-size: 0.85rem;
+  font-family: var(--fuente-detalles);
+  font-size: 0.88rem;
   font-weight: 500;
   padding: 8px 0;
   transition: color 0.3s;

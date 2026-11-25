@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://natanalfaro.org/</loc></url>
+  <url><loc>https://natanalfaro.org/biografia</loc></url>
+  <url><loc>https://natanalfaro.org/mensajes</loc></url>
+  <url><loc>https://natanalfaro.org/ministerios</loc></url>
+  <url><loc>https://natanalfaro.org/invitaciones</loc></url>
+  <url><loc>https://natanalfaro.org/visitanos</loc></url>
+  <url><loc>https://natanalfaro.org/vida-bendecida</loc></url>
   <url><loc>https://natanalfaro.org/ofrenda</loc></url>
 </urlset>

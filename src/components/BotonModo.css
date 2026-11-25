@@ -30,4 +30,4 @@ html.cambiando-modo *::after {
   transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease !important;
 }
 
-.boton-idioma { font-family: var(--fuente-titulos); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.06em; }
+.boton-idioma { font-family: var(--fuente-detalles); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.06em; }

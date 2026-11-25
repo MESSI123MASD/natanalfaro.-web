@@ -34,7 +34,7 @@
 }
 
 .red__texto { display: flex; flex-direction: column; flex: 1; min-width: 0; }
-.red__texto strong { font-family: var(--fuente-titulos); font-weight: 600; color: var(--titulo); }
+.red__texto strong { font-family: var(--fuente-detalles); font-weight: 600; color: var(--titulo); }
 .red__texto small { color: var(--texto-suave); font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .red__flecha { color: var(--texto-tenue); transition: transform 0.35s var(--curva), color 0.3s; }

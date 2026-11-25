@@ -26,8 +26,9 @@
 .palabra__tarjeta .seccion__etiqueta::before { display: none; }
 
 .palabra blockquote {
+  font-style: italic;
   margin: 0;
-  font-family: var(--fuente-titulos);
+  font-family: var(--fuente-texto);
   font-size: clamp(1.3rem, 3vw, 1.9rem);
   font-weight: 500;
   line-height: 1.45;
