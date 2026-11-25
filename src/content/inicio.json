@@ -3,19 +3,19 @@
     "etiqueta": "Pastor · Casa de Mi Gloria",
     "nombre": "Natán Alfaro",
     "frase": "Hoy es el primer día del resto de tu vida bendecida",
-    "texto": "Fundador y Pastor Principal de Casa de Mi Gloria. Plantador de iglesias, líder misional y conferencista internacional, equipando líderes y avanzando el Reino de Dios en Nicaragua.",
+    "texto": "Fundador y pastor principal de Casa de Mi Gloria. Plantador de iglesias, líder misional y conferencista internacional, equipando líderes y avanzando el Reino de Dios en Nicaragua.",
     "foto": "/img/natan-alfaro.jpg"
   },
   "biografia": {
     "titulo": "Soy Natán Alfaro",
     "imagen": "/img/natan-y-cristina.jpg",
     "parrafos": [
-      "Desde 2010 soy fundador y Pastor Principal, junto a mi esposa Cristina, de Casa de Mi Gloria en Managua. Soy plantador de iglesias, líder misional y conferencista internacional, y mi pasión es equipar líderes para avanzar el Reino de Dios.",
-      "Me gradué en Teología de Southwestern Assemblies of God University (SAGU), en Texas, en 1994. Dirijo el programa radial Faro del Espíritu y el Centro de Capacitación El Faro.",
+      "Desde 2010 soy fundador y pastor principal, junto a mi esposa Cristina, de Casa de Mi Gloria en Managua. Soy plantador de iglesias, líder misional y conferencista internacional, y mi pasión es equipar líderes para avanzar el Reino de Dios.",
+      "Me gradué en Teología en la Southwestern Assemblies of God University (SAGU), en Texas, en 1994. Dirijo el programa radial Faro del Espíritu y el Centro de Capacitación El Faro.",
       "Con Cristina fundamos el ministerio matrimonial Defensores del Pacto y el Congreso Enamorados, y dirigimos el Centro Infantil Acahualinca y el Centro de Entrenamiento Ministerial Managua."
     ]
   },
-  "mision": "Apasionados por cumplir el sueño de Dios para Nicaragua, hemos creado iglesias, desarrollado proyectos, ministerios y programas con el objetivo de que cada persona pueda conocer a Jesucristo, encontrar salvación en Él, que su vida sea transformada y alcance el propósito por el cual ha sido diseñada.",
+  "mision": "Apasionados por cumplir el sueño de Dios para Nicaragua, hemos creado iglesias, desarrollado proyectos, ministerios y programas con el objetivo de que cada persona pueda conocer a Jesucristo, encontrar salvación en Él, ver su vida transformada y alcanzar el propósito para el cual fue diseñada.",
   "mensaje": {
     "titulo": "Mensajes",
     "texto": "Prédicas, series y reflexiones para tu semana. Nuevos mensajes cada semana en YouTube.",
@@ -52,7 +52,7 @@
   ],
   "radio": {
     "titulo": "Faro del Espíritu",
-    "texto": "Programa radial con la Biblia como base, con temas para alimentar tu vida espiritual. Dirigido por el Pastor Natán Alfaro.",
+    "texto": "Programa radial basado en la Biblia, con temas para alimentar tu vida espiritual, dirigido por el Pastor Natán Alfaro.",
     "frecuencia": "",
     "url": "https://farodelespiritu.com/",
     "boton": "Escuchar Faro del Espíritu"

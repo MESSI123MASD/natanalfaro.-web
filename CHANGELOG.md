@@ -10,6 +10,12 @@ Mientras el sitio esté en construcción usamos `0.x`. Al publicarlo en natanalf
 
 ## [Sin publicar]
 
+## [1.1.1] - 2026-11-25
+
+### Corregido
+- Ortografía y redacción: "cristocéntrica" en minúscula, "200 metros abajo" (en vez de "200 mts."),
+  "pastor principal" en minúscula como cargo, "dos meses", y frases más claras en la misión, la biografía y Faro del Espíritu.
+
 ## [1.1.0] - 2026-11-25
 
 ### Agregado

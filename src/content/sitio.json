@@ -2,7 +2,7 @@
   "nombre": "Pastor Natán Alfaro",
   "lema": "Hoy es el primer día del resto de tu vida bendecida",
   "contacto": {
-    "direccion": "Rotonda Universitaria 200 mts. abajo, Managua, Nicaragua",
+    "direccion": "Rotonda Universitaria 200 metros abajo, Managua, Nicaragua",
     "telefono": "+505 8881 8881",
     "whatsapp": "50588818881",
     "email": "pastor@casademigloria.org"
@@ -51,5 +51,5 @@
       "destacada": false
     }
   ],
-  "descripcion": "Fundador y Pastor Principal de Casa de Mi Gloria. Plantador de iglesias, líder misional y conferencista internacional."
+  "descripcion": "Fundador y pastor principal de Casa de Mi Gloria. Plantador de iglesias, líder misional y conferencista internacional."
 }
